@@ -1,0 +1,208 @@
+/** 기본 레이아웃 **/
+body {
+	position: relative;
+	-webkit-text-size-adjust: 100%
+}
+/** 공통 css 리셋 설정 **/
+html, body, ul, ol, li, dl, dd, dt, form, fieldset, legend {
+	margin: 0; padding: 0
+}
+html {
+	/*overflow: hidden;*/ /*overflow-y:hidden*/
+}
+body, table, input, textarea, select {
+	font-size: 14px;
+	font-family: /* malgun gothic, */ sans-serif, 돋움, dotum, Arial; color: white; color:#666666;
+	-webkit-text-size-adjust: none /*아이폰 글자크기 자동조정 방지 : viewport설정 maximum-scale:1.0 이하에서 작동*/
+}
+header, main, nav, aside, section, article, footer, address {
+	display: block
+}	/* 브라우저 하위 버전에서 사용하기 위한 처리 */
+h1, h2, h3, h4, h5, h6, p {margin: 0}
+img, fieldset {border: 0}
+/*input, textarea, select {font-size:110%; line-height:1.1}*/
+
+li {list-style: none}	/* 불릿 모양 제거 */
+address {font-style: normal} 	/* 기본 이탤릭체에서 normal로 변경 */
+abbr, acronym {
+	border-bottom: .1em dotted;
+	cursor: help
+}
+
+/** 슈도 클래스(pseudo class) **/
+a {
+	text-decoration: none;
+	color: rgb(255,255,255)
+} 	/* unvisited link */
+a:hover {
+	text-decoration: underline /*color:#007FC8*/
+}	/* mouse over link */
+hr {clear: both; border: 0}
+.bold {font-weight:bold}
+
+	
+/* 스크롤바 크기 */
+/* width */
+::-webkit-scrollbar {width: 3px}
+
+/* Track */
+::-webkit-scrollbar-track {background: #f1f1f1}
+
+/* Handle */
+::-webkit-scrollbar-thumb {background: #888}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555}
+
+
+	
+/***** 설정 *****/
+body {
+	/*width: auto;*/
+	padding: 0px 9%;
+	background: #191919 /*rgb(22,22,22)*/
+}
+header, main, footer {
+	/*width: 650px;*/	/*130×n= 650/780px*/
+	padding: 10px 20px; clear:both
+}
+header li {padding: 0 5px; float: left}
+section {
+	width: 120px; height: 230px;
+	margin: 0 10px;
+	float: left;
+	overflow:auto /* 스크롤바 자동 생성 */
+}
+section li {padding: 2px 4px} /* 목록별 여백 설정 */
+h4 {
+	padding: 4px;
+	background: rgb(128,128,128);
+	font-weight: bold;
+	color: white
+}
+.tab {
+	position: relative;
+	padding: 0
+}
+.submenu {display: none}
+.tab:hover .submenu {
+	display: block;
+	position: absolute;
+	top: 0;	left: 0;
+	width: 120px; height: 230px;
+	background:rgba(40, 40, 40, .8) /* #FCFCFC */
+}
+footer {font-size: 12px}
+
+.fav {width: 15px; height: 15px}
+
+
+/** 실시간 시간과 날짜 표시 js용 **/
+#dateClock {
+	top: 0; right: 0;
+	position: fixed;
+	color: gray;
+	font-weight: bold
+}
+#date {font-size: 21px}
+#clock {font-size: 36px}
+#dateClock .recodingTime div{margin: 5px 0px;}
+
+/* 죄측면 사이드바 | 동시 검색 */
+.sidebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 140px;
+	height: 100%;
+	background-color: #333;
+	color: white;
+	overflow: hidden;
+	transform: translateX(-135px);
+	transition: transform 0.3s ease;
+	z-index: 1000;
+}
+
+.sidebar:hover {
+	transform: translateX(0);
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar ul li {
+	/* padding: 5px 10px; */
+	border-bottom: 1px solid #444;
+	/* text-align: center; */
+}
+
+.sidebar ul li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+
+.sidebar ul li a:hover {
+	background-color: #575757;
+}
+
+.col2 {float: left;}
+
+/** 토글 버튼 **/
+.toggle-container {
+	max-width: 100%;
+	margin: 20px auto;
+	font-family: Arial, sans-serif;
+}
+
+.toggle-section {
+	margin-bottom: 10px;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.toggle-header {
+	background-color: #f7f7f7;
+	padding: 12px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.toggle-header:hover {
+	background-color: #f0f0f0;
+}
+
+.toggle-content {
+	padding: 15px;
+	background-color: #ffffff;
+	display: none;
+	line-height: 1.6;
+}
+
+.toggle-content.active {
+	display: block;
+}
+
+.toggle-icon {
+	transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotated {
+	transform: rotate(180deg);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 100%) {
+	.toggle-container {
+		width: 95%;
+		margin: 10px auto;
+	}
+}

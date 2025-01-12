@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html>
+<!-- 목록 기본 서식
+<li><a href="" target="_blank"></a></li>
+
+<li><a href="" target="_blank" title=""></a> /·
+    <a href="" target="_blank" title=""></a>
+</li>
+
+<li>
+    <a href="" target="_blank" title=""><img src="http://URL/favicon.ico" class="fav">파비콘</a>
+</li>
+파비콘
+<img src="http://URL/favicon.ico" class="fav">
+-->
+<head>
+    <meta charset="utf-8">
+    <title>Bookmark_Home</title>
+    <link rel="stylesheet" href="css/Home.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/dateClock.js"></script>
+</head>
+<body>
+    <aside class="sidebar"><!-- 죄측면 사이드바 | 동시 검색 -->
+        <ul>
+            <li><a class="col2" href=".\Multi_Search\멀티_검색.html" target="_blank">멀티 검색</a>
+                <a href=".\Multi_Search\Multi_Search(2).html" target="_blank" title="동시 검색(2) - 옵션별">(2)</a>
+            </li>
+            <li><a href=".\Multi_Search\멀티_검색-도서.html" target="_blank">도서</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-사전.html" target="_blank">사전</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-번역.html" target="_blank">번역</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-쇼핑.html" target="_blank">쇼핑</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-영화.html" target="_blank">영화</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-이미지.html" target="_blank">이미지</a></li>
+            <li><a href=".\Multi_Search\멀티_검색-앱.html" target="_blank">앱</a></li>
+            <li><A href=".\Multi_Search\멀티_검색-지도.html" target="_blank">지도</A></li>
+            <li><a href=".\Multi_Search\멀티_검색-직구.html" target="_blank">직구</a></li>
+        </ul>
+    </aside>
+    <aside id="dateClock"> <!-- 우측면 | 날짜와 시간 표시-->
+        <div id="date"></div>
+        <div id="clock"></div>
+        <div class="recodingTime">
+            <div id="remainingTime"></div>
+            <div id="myRemainingTime"></div>
+            <div id="remainingDate"></div>
+            <div id="elapsedTime"></div>
+        </div>
+    </aside>
+    <header>
+        <li><a href="http://www.missed-call.com" target="_blank" title="스팸 확인">스팸</a></li>
+        <li><a href="https://bit.ly/2VRnADX" target="_blank" title="날씨 네이버 기상청">☂</a>
+            <a href="https://weather.naver.com/today/09305625" target="_blank" title="날씨 한번에 보기"><!--네이버 날씨 -->☀</a>
+            <a href="https://bit.ly/3guLgHc" target="_blank" title="미세먼지"><!--네이버 날씨 -->🌫</a><a href="https://weather.naver.com/air/09560128" target="_blank" title="미세먼지 동네별">🌫</a>
+            <a href="https://bit.ly/361af2Q" target="_blank" title="과거 날씨"><!--네이버 날씨 -->🌈</a>
+            <a href="https://bit.ly/3RQfJSS" target="_blank" title="전국날씨">☀</a>
+            <a href="https://weather.naver.com/map" target="_blank" title="전국날씨 지도">🌐</a>
+            <a href="https://weather.naver.com/compare/09560128" target="_blank" title="예보비교">☀</a>
+            <a href="https://weather.naver.com/video/09560128" target="_blank" title="영상">📹</a>
+        </li>
+        <li><a href="https://www.notion.so/bychoi8249/" target="_blank" title="노션/bychoi8249"><img
+                    src="https://www.notion.so/front-static/favicon.ico" class="fav"><!--노션--></a>
+            <a href="https://www.notion.so/ko-kr" target="_blank" title="노션 공식 사이트">노션</a>
+            <a href="https://www.notion.so/bychoi8249/deb08abe119943eea831b2d21c69bc5e" target="_blank"
+                title="노션용 북마크">URL</a>
+        </li>
+        <li><a href="https://namu.wiki" target="_blank" title="나무위키">나무</a><a href="https://namu.wiki/random" target="_blank" title="나무위키 랜덤">·</a><a href="https://en.wikipedia.org"
+                target="_blank" title="위키피디아 영문">위키</a>
+            <a href="https://ko.wikipedia.org" target="_blank" title="위키피디아 한국">🇰🇷</a>
+            <a href="https://ko.wikipedia.org/wiki/위키백과:오늘의_역사" target="_blank" title="위키피디아 오늘의 역사">역사</a>·<a
+                href="https://newslibrary.naver.com/search/searchByDate.naver" target="_blank"
+                title="역사 | 오늘의 뉴스 - 네이버">뉴스</a>·<a href="https://www.ehistory.go.kr/theme/remember_mon" target="_blank"
+                title="역사 | 오늘의 사건 - 영상역사관">사건</a>
+        </li>
+        <li><a href="https://dict.naver.com" target="_blank" title="어학사전/지식백과 검색">사전</a>·<a
+                href="https://terms.naver.com" target="_blank" title="지식백과">백과</a>·<a href="https://bit.ly/3xQzEXw"
+                target="_blank" title="네이버/지식>랜덤1">지식</a>·<a href="https://bit.ly/3Y2THfX" target="_blank"
+                title="네이버/지식>랜덤2">랜덤</a></li>
+        <li><a href="https://bitly.com" target="_blank" title="bitly 단축 URL">#단축</a></li>
+        <li><a href="https://bit.ly/3cSm6Ao" target="_blank" title="네이버 달력">📆<img
+                    src="https://www.naver.com/favicon.ico" class="fav"></a></li>
+        <li><a href="https://bit.ly/3nYMcrZ" target="_blank" title="간지/만나이/배란일/출산예정일">📆<img
+                    src="https://www.daum.net/favicon.ico" class="fav"></a></li>
+        <li><a href="https://bit.ly/3E0B03w" target="_blank" title="양력↔음력 변환/기념일/D-day 계산">📆<img
+                    src="https://zum.com/favicon.ico" class="fav"></a></li>
+        <li><a href="https://calendar.google.com" target="_blank" title="구글 캘린더"><img
+                    src="https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_10.ico"
+                    class="fav"></a></li><!--https://ssl.gstatic.com/ui/v1/icons/mail/rfr/unreadcountfavicon/3/100+.png-->
+        <li><a href="https://photos.google.com" target="_blank" title="구글 포토"><img
+                    src="https://photos.google.com/favicon.ico" class="fav"><!--G포토--></a></li>
+        <li><a href="https://docs.google.com/spreadsheets" target="_blank" title="구글 시트"><img
+                    src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" class="fav"><!--G시트--></a></li>
+        <li><a href="https://drive.google.com" target="_blank" title="구글 드라이브"><img
+                    src="https://drive.google.com/favicon.ico" class="fav"><!--G드라이브--></a></li>
+        <li><a href="https://mail.google.com" target="_blank" title="G메일"><img src="https://mail.google.com/favicon.ico"
+                    class="fav"><!--G메일📧--></a>
+        <li><a href="https://docs.google.com/document/d/1Xz4j5BO7ZWY8p0CbNaXlnM4xDADMHx1C5l240nM14DU/edit?usp=sharing"
+                target="_blank" title="G문서 음성인식 AI"><img src="https://docs.google.com/favicon.ico"
+                    class="fav"><!--G문서--></a>
+            <!--<li><a href="https://mail.google.com" target="_blank" title="G킵 메"><img src="https://mail.google.com/favicon.ico"  class="fav"></a>-->
+        </li>
+        <li><a href="https://bit.ly/2JpZ7xD" target="_blank" title="환율">💸</a></li>
+    </header>
+
+    <main>
+        <section><!-- 01 검색 시작 -->
+            <li class="tab">
+                <h4>검색🔍</h4>
+                <ul class="submenu">
+                    <h4><a href="https://bit.ly/2vLSTBF" title="바로찾기 사전 사이트" target="_blank">검색2</a>
+                        <a href="https://weather.naver.com/news" target="_blank" title="날씨 뉴스"><!--네이버 날씨 -->⛱</a><a href="https://bit.ly/3XMdgwL" target="_blank" title="오존">⛱️</a><a href="https://bit.ly/3XGwLa0" target="_blank" title="황사">🌫</a><a href="https://weather.naver.com/warning" target="_blank" title="기상특보"><!--네이버 날씨 -->🌀</a></h4>
+                    <li><a href="http://www.korean.go.kr" target="_blank">국립국어원</a></li>
+                    <li><a href="https://www.sbiznews.com/FranchiseIndex" target="_blank">프렌차이즈순위</a></li>
+                    <li><a href="https://commons.wikimedia.org" target="_blank">위키미디어</a></li>
+                    <li><a href="https://www.afreecatv.com" target="_blank">아프리카TV</a></li>
+                    <li><a href="https://tv.kakao.com" target="_blank" title="카카오TV">카카오</a> /
+                        <a href="https://tv.naver.com" target="_blank" title="네이버TV">네이버</a>
+                    </li>
+                    <li><a href="https://bit.ly/3lTXv2Q" target="_blank">쿡TV</a><!--쿡TV 조회 https://bit.ly/3HEdISI -->
+                        <a href="https://bit.ly/3srZ4Ym" target="_blank" title="식품 영양성분">영양</a>/<a
+                            href="https://bit.ly/3B2Sagg" target="_blank" title="농촌진흥청 국립농업과학원 식품 영양정보">성분</a>
+                    </li>
+                    <li><a href="https://ko.wikihow.com" target="_blank" title="wikiHow">위키하우</a>·<a
+                            href="https://blisgo.com" target="_blank" title="쓰레기 백과사전">쓰레기</a></li>
+                    <li><a href="https://search.naver.com/search.naver?ie=UTF-8&query=관세계산기" target="_blank">관세계산기</a>
+                    </li>
+                    <li><a href="https://yoda.wiki/" target="_blank">요다위키</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.naver.com" target="_blank" title="네이버(NAVER)">네버</a> <a class="bold"
+                    href="https://search.naver.com/search.naver?query=Cue%3A&cue=0&where=nexearch" target="_blank"
+                    title="네이버 cue AI 검색">큐</a>
+                <a href="http://www.daum.net" target="_blank" title="Daum">다음</a>
+                <a href="https://zum.com" target="_blank" title="zum, 영화명-한글(영문, 개봉년도)">줌</a>
+            </li>
+            <li><a href="https://www.google.co.kr" target="_blank" title="구글 코리아">구<a
+                        href="https://www.google.com/webhp?hl=en" target="_blank" title="Google.com">글</a>·<a class="bold"
+                        href="https://www.perplexity.ai" target="_blank" title="퍼플렉시티(Perplexity) AI 검색">퍼플</a>·<a
+                        href="https://www.nate.com" target="_blank">네이트</a>
+            <li class="bold"><a href="https://namu.wiki/w/생성형%20인공지능" target="_blank" title="생성형 인공지능 AI">생</a><a href="https://claude.ai" target="_blank" title="클로드(Claude) AI">성</a><a href="https://bard.google.com" target="_blank" title="Gemini AI">AI</a>
+                <a href="https://chat.openai.com" target="_blank" title="쳇GPT AI">GPT</a>
+                <!-- <a href="whale-extension://jgjaeacdkonaoafenlfkkkmbaopkbilf/chatPage.html" target="_blank" title="AT 쳇GPT 3.5 vs 바드 - @웨일"><img
+                    src="https://chatgpt4google.com/favicon.ico" class="fav">AI for 구글</a>-->
+                <a href="https://clova-x.naver.com/" target="_blank" title="AT | 클로바-X - @네이버"><img
+                        src="https://ssl.pstatic.net/static/clovax/favicon/clova_x_favicon.png" class="fav"><!--클로바X--></a><a href="chrome-extension://jgjaeacdkonaoafenlfkkkmbaopkbilf/chatPage.html" target="_blank" title="AT | 쳇GPT 3.5 vs Gemini - @크롬"><img
+                    src="https://www.google.com/chrome/static/images/favicons/favicon-32x32.png" class="fav"><!--크롬--></a>
+                <!--<a href="whale-extension://jgjaeacdkonaoafenlfkkkmbaopkbilf/chatPage.html" target="_blank" title="AT | 쳇GPT 3.5 vs 바드 - @웨일"><img src="https://whale.naver.com/img/favicon_32.png" class="fav">웨일</a>-->
+            </li>
+            <li><a href="http://www.youtube.com" target="_blank" title="유튜브"><img
+                src="http://www.youtube.com/favicon.ico" class="fav"><!--유튜브--></a>
+                <a href="https://trends.google.com" target="_blank" title="구글트렌드">구글</a>/<a href="https://some.co.kr"
+                    target="_blank" title="썸트렌드">트렌드</a>
+            </li>
+            <li><a href="https://datalab.naver.com" target="_blank" title="DataLab.">데이터랩</a> /
+                <a href="https://bit.ly/3uod5sR" target="_blank" title="쇼핑인사이트">쇼핑</a>
+            </li>
+            <li><a href="https://datalab.naver.com/keyword/trendSearch.naver" target="_blank">검색어트렌드</a></li>
+            <li><a href="https://nara-speller.co.kr/speller" target="_blank" title="한국어 맞춤법/문법 검사기">국어</a><!--http://speller.cs.pusan.ac.kr-->
+                <a href="https://search.naver.com/search.naver?ie=UTF-8&query=네이버+맞춤법+검사기" target="_blank"
+                    title="네이버 맞춤법 검사기">문법</a>
+                <a href="https://bit.ly/3HpIEGi" target="_blank" title="사람인 맞춤법 검사기">검사</a>
+            </li>
+            <li><a href="http://translate.google.com" target="_blank" title="구글 번역"><!-- <img src="https://ssl.gstatic.com/translate/favicon.ico" class="fav"> -->
+                G</a>
+                <a href="https://www.deepl.com/" target="_blank" title="DeepL">번역</a>
+                <a href="https://papago.naver.com" target="_blank" title="네이버 번역">파파고</a>
+            </li>
+        </section>
+        <section><!-- 02 PC커뮤니티 시작 -->
+            <li class="tab">
+                <h4>PC커뮤니티</h4>
+                <ul class="submenu">
+                    <h4>커뮤니티</h4>
+                    <li><a href="http://stcold12.blog.me" target="_blank" title="블로그">stcol12</a> /
+                        <a href="http://stcold14.blog.me" target="_blank" title="블로그">stcol14</a>
+                    </li>
+                    <li><a href="https://wordmark.it" target="_blank">wordmark.it</a></li>
+                    <li><a href="https://typekit.com" target="_blank">Typekit</a>
+                        <a href="https://www.downloadgeral.com" target="_blank" title="💾 downloadgeral">geral</a>
+                    </li>
+                    <li><a href="https://www.softdowntown.com" target="_blank" title="💾 소프트다운타운">💾</a>
+                        <a href="https://www.softonic.kr" target="_blank" title="💾 Softonic 한글 AI">오닉</a>
+                        <a href="https://ko.taiwebs.com" target="_blank" title="💾 taiwebs 한글">taiwebs</a>
+                    </li>
+                    <li><a href="https://play.google.com/store/apps" target="_blank" title="💾 구글 플레이">구글</a> /
+                        <a href="https://fnd.io" target="_blank" title="💾 애플 앱 스토어(iOS/iPad/맥)">애플</a> /
+                        <a href="https://apps.microsoft.com" target="_blank" title="💾 MS 스토어">MS</a>
+                    </li>
+                    <li><a href="http://www.rankey.com" target="_blank">랭키닷컴</a></li>
+                    <li><a href="https://jsb000.tistory.com" target="_blank" title="윈도우즈/Office">홍차의 꿈</a></li>
+                    <li><a href="http://wiki.hash.kr" target="_blank" title="해시넷 코인위키 '블록체인/암호화폐'">해시넷</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.kbench.com" target="_blank">K-벤치</a>/
+                <a href="http://www.bodnara.co.kr" target="_blank">보드나라</a>
+            </li>
+            <li><a href="https://quasarzone.co.kr" target="_blank">퀘이사존</a>/<a href="http://www.joyzen.co.kr" target="_blank">조이젠</a></li>
+            <li><a href="https://coolenjoy.net" target="_blank">쿨앤조이</a><a href="http://technoa.co.kr" target="_blank">테크노아</a></li>
+            <li><a href="http://www.compuzone.co.kr" target="_blank">컴퓨존</a>/<a href="http://www.icoda.co.kr" target="_blank">아이코다</a></li>
+            <!-- AI 사이트 -->
+            <li><a href="https://lilys.ai" target="_blank" title="Lilys 요약 AI ">릴리스</a><a href="" target="_blank"></a>
+                <a href="https://www.bloflo.com" target="_blank" title="SEO 활용 블로그 작성 AI 블로플로">블로플로</a><a href="" target="_blank"></a>
+            </li>
+            <li><a href="https://deepmind.google/technologies/veo" target="_blank" title="실사, 영화같은 동영상 생성 AI Veo2">Veo</a>
+                <a href="https://sora.com" target="_blank" title="ㅇ AI Sora">Sora</a>
+                <a href="https://runwayml.com" target="_blank" title="동영상 생성형 AI Runway">런웨이</a>      
+            </li>
+            <li><a href="https://www.huggingface.co" target="_blank" title="AI 플랫폼 HuggingFace">허깅페이스</a>
+                <a href="https://klingai.com" target="_blank" title="동영상 생성형 AI Kling">클링</a>
+                <a href="https://aistudio.google.com/prompts/new_chat" target="_blank" title="Google AI Studio">구글 AI 스튜디오</a>            
+            </li>
+            <li><a href="https://www.canva.com/ko_kr" target="_blank" title="이미지 생성/사진 편집, 모든 디자인 AI Canva">캔바</a>
+                <a href="https://gamma.app/ko" target="_blank" title="생성형 인공지능 기반 컴퓨터 에이전트 AI Google Jarvis">감마</a>
+                <a href="https://app.napkin.ai" target="_blank" title="문서에 맞는 이미지 생성 AI Napkin">냅킨</a>            
+            </li>
+            <li><a href="https://mistral.ai" target="_blank" title="Mistral AI">미스트랄</a>
+                <a href="https://ai.meta.com/llama" target="_blank" title="생성형 AI LLaMA">라마</a>
+                <a href="https://x.com/i/grok" target="_blank" title="생성형 AI Grok">그록</a>
+            </li>
+            <li><a href="https://qwenlm.github.io" target="_blank" title="중국 소형 언어 모델 Qwen(AI)">Qwen</a>
+                <a href="https://www.midjourney.com" target="_blank" title="이미지 생성형 AI Midjourney">미드저니</a>
+                <a href="https://stability.ai/stable-image" target="_blank" title="이미지 생성형 AI Stable Diffusion">스테이블 디퓨전</a>            
+            </li>
+            <li><a href="https://suno.com" target="_blank" title="음악 생성형 AI">SUNO</a>
+                <a href="https://www.stableaudio.com" target="_blank" title="동영상 생성형 AI Kling">스테이블 오디오</a>
+                <a href="https://udio.com" target="_blank" title="음악 생성형 AI">Udio</a>
+                <a href="https://optimizerai.xyz" target="_blank" title="효과음 생성형 OptimizerAI">OptimizerAI</a>
+                <a href="https://www.phind.com" target="_blank" title="코딩 생성형 AI Phind">파인드</a>  
+            </li>
+        </section>
+        <section><!-- 03 PC커뮤니티 시작 -->
+            <li class="tab">
+                <h4>모바일/디지털</h4>
+                <ul class="submenu">
+                    <h4>통신</h4>
+                    <li><a href="https://www.kt.com" target="_blank">KT</a> /
+                        <a href="http://www.tworld.co.kr" target="_blank">SK</a> /
+                        <a href="http://www.uplus.co.kr" target="_blank">U+</a>
+                    </li>
+                    <li><a href="http://www.freet.co.kr" target="_blank">freeT</a></li>
+                    <li><a href="http://speed.nia.or.kr" target="_blank">인터넷속도</a></li>
+                    <li><a href="https://browserbench.org/Speedometer3.0" target="_blank" title="브라우저 속도 측정">브라우저</a>
+                        <a href="https://browserbench.org/JetStream" target="_blank" title="JetStream 2.2는 최신 웹 앱에 중점을 둔 JavaScript 및 WebAssembly 벤치마크 제품 속도 측정">속</a><a href="https://browserbench.org/MotionMark1.3.1" target="_blank" title="모션마크는 복잡한 장면을 목표 프레임 속도로 애니메이션화하는 브라우저의 기능을 측정">도</a></li>
+                    <li><a href="http://www.100mb.kr" target="_blank">100메가</a></li>
+                    <li><a href="https://www.economist.com" target="_blank" title="
+    The Economist 주간지">이코노미스트</a></li>
+                </ul>
+                </i>
+            <li>
+                <a href="http://www.clien.net" target="_blank">클리앙</a>
+                <a href="http://www.bloter.net" target="_blank">블로터</a>
+            </li>
+            <li><a href="http://www.todaysppc.com" target="_blank" title="Todaysppc">투피</a> / <a href="http://www.cetizen.com" target="_blank">세티즌</a></li>
+            <li><a href="https://www.phonearena.com" target="_blank">폰 아레나</a></li>
+            <li><a href="https://dvdprime.com" target="_blank">DVDPrime</a></li>
+            <li><a href="http://www.kmug.co.kr" target="_blank">KMUG</a></li>
+            <li>
+                <a href="https://search.zum.com/search.zum?query=세계날씨" target="_blank" title="줌(ZUM) 날씨 세계">날씨</a>·<a href="https://search.daum.net/search?w=tot&DA=Z8T&rtmaxcoll=WTW&q=세계날씨" target="_blank" title="다음(Daum) 세계날씨">세계</a>·<a style="color:darkred" href="https://search.daum.net/search?w=tot&DA=Z8T&rtmaxcoll=WHR&q=재난문자" target="_blank" title="다음(Daum)">재난문자</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4><a href="https://bit.ly/35DVq0Y" target="_blank">크라우드펀딩</a></h4>
+                <ul class="submenu">
+                    <h4>SNS</h4>
+                    <li><a href="https://www.instagram.com" target="_blank">인스타그램</a></li>
+                    <li><a href="https://www.facebook.com" target="_blank">페북</a> /
+                        <a href="https://twitter.com" target="_blank">트위터</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://www.kickstarter.com" target="_blank">킥스타터</a></li>
+            <li><a href="https://www.indiegogo.com" target="_blank">인디고고</a></li>
+            <li><a href="https://www.wadiz.kr" target="_blank">와디즈</a>
+                <a href="https://tumblbug.com" target="_blank">텀블벅</a>
+            </li>
+            <li><a href="https://www.crowdnet.or.kr" target="_blank">크라우드넷</a></li>
+            <li><a href="https://www.ycrowdy.com" target="_blank">크라우디</a></li>
+            <li><a href="https://www.ohmycompany.com" target="_blank">오마이컴퍼니</a></li>
+            <li><a href="https://www.makestar.co" target="_blank">메이크스타</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>브랜드</h4>
+                <ul class="submenu">
+                    <h4>브랜드2</h4>
+                    <li><a href="https://www.intel.co.kr" target="_blank">인텔</a> /
+                        <a href="https://www.amd.com" target="_blank">AMD</a>
+                    </li>
+                    <li><a href="https://www.nvidia.com" target="_blank">nVidia</a></li>
+                    <li><a href="https://www.asus.com" target="_blank">ASUS</a>
+                        <a href="https://www.asus.com/kr" target="_blank" title="한국 ASUS">🇰🇷</a>
+                        / 
+                        <a href="https://www.msi.com" target="_blank">MSI</a>
+                        <a href="https://kr.msi.com" target="_blank" title="한국 MSI">🇰🇷</a>
+                    </li>
+                    <li><a href="https://www.gigabyte.com" target="_blank">Gigabyte</a>
+                        <a href="https://www.gigabyte.com/kr" target="_blank" title="한국 기가바이트">🇰🇷</a>
+                    </li>
+                    <li><a href="https://www.logitech.com" target="_blank">로지텍</a>
+                        <a href="https://www.logitech.com/ko-kr" target="_blank" title="한국 로지텍">🇰🇷</a>
+                    </li>
+                    <li><a href="https://www.corsair.com" target="_blank">커세어</a><a href="https://www.corsair.co.kr" target="_blank" title="한국 커세어">🇰🇷</a>
+                        <a href="https://www.razer.com" target="_blank" title="RAZER">레이저</a><a href="https://www2.razer.com/kr-kr" target="_blank" title="한국 RAZER">🇰🇷</a>
+                    </li>
+                    <li><a href="https://www.seagate.com" target="_blank">씨게이트</a> /
+                        <a href="https://www.westerndigital.com/ko-kr" target="_blank">WD</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://www.microsoft.com" target="_blank" title="Microsoft">MS</a>
+                 / <a href="https://www.apple.com" target="_blank" title="애플"><img src="https://www.apple.com/favicon.ico" class="fav"><!--애플--></a>
+                <a href="https://www.apple.com/kr" target="_blank" title="애플 코리아">🇰🇷</a>
+                <a href="https://about.google/intl/ko_kr/products" target="_blank">구글</a>
+            </li>
+            <li><a href="https://www.samsung.com" target="_blank">삼성</a> /
+                <a href="https://www.lg.co.kr" target="_blank">LG</a>
+            </li>
+            <li><a href="https://www.philips.co.kr" target="_blank">필립스</a>
+                <a href="https://www.mi.com/global" target="_blank">샤오미</a>
+                <a href="https://www.mi.com" target="_blank" title="한국 샤오미">🇰🇷</a>
+            </li>
+            <li><a href="https://www.sony.com" target="_blank">소니</a>
+                <a href="https://www.sony.co.jp" target="_blank" title="일본 소니">🇯🇵</a>
+                <a href="https://www.sony.co.kr" target="_blank" title="한국 소니">🇰🇷</a>
+            </li>
+            <li><a href="https://global.canon" target="_blank">캐논</a>
+                <a href="https://kr.canon" target="_blank" title="한국 캐논">🇰🇷</a>
+                / 
+                <a href="https://www.nikon.com" target="_blank" title="니콘 카메라">니콘</a>
+                <a href="https://www.nikon-image.co.kr" target="_blank" title="한국 니콘">🇰🇷</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>공공기관</h4>
+                <ul class="submenu">
+                    <h4>공공기관2</h4>
+                    <li><a href="https://www.mfds.go.kr" target="_blank" title="식품의약품안전처">식약처</a>
+                        <a href="https://www.foodsafetykorea.go.kr/main.do" target="_blank" title="식품안전나라">식품안전</a>
+                    </li>
+                    <li><a href="https://nts.go.kr" target="_blank">국세청</a> /
+                        <a href="https://www.customs.go.kr" target="_blank">관세청</a>
+                    </li>
+                    <li><a href="http://msit.go.kr" target="_blank" title="과학기술정보통신부">과기부</a> /
+                        <a href="http://kipo.go.kr" target="_blank">특허청</a>
+                    </li>
+                    <li><a href="http://police.go.kr" target="_blank">경찰청</a> /
+                        <a href="http://nfa.go.kr" target="_blank">소방청</a>
+                    </li>
+                    <li><a href="http://mois.go.kr" target="_blank" title="행정안전부">행안부</a> /
+                        <a href="http://me.go.kr" target="_blank">환경부</a>
+                    </li>
+                    <li><a href="http://mohw.go.kr" target="_blank" "보건복지">복지부</a> /
+                        <a href="http://kdca.go.kr" target="_blank" title="질병관리청">질병청</a>
+                    </li>
+                    <li><a href="http://moel.go.kr" target="_blank" title="고용노동부">고용부</a> /
+                        <a href="http://molit.go.kr" target="_blank" title="국토교통부">국토부</a>
+                    </li>
+                    <li><a href="https://www.law.go.kr" target="_blank" title="국가법령정보센터">법령</a>/<a
+                            href="http://likms.assembly.go.kr/bill" target="_blank" title="국회 의안정보시스템">의안</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://www.gov.kr" target="_blank">정부24</a> /
+                <a href="https://whatsnew.moef.go.kr" target="_blank">정책</a>
+            </li>
+            <li><a href="http://db.history.go.kr" target="_blank">한국사</a> /
+                <a href="https://kostat.go.kr" target="_blank">통계청</a>
+            </li>
+            <li><a href="https://www.data.go.kr" target="_blank" title="공공데이터포털">공공DB</a>
+                <a href="https://data.seoul.go.kr" target="_blank" title="서울 열린데이터 광장">서울DB</a>
+            </li>
+            <li><a href="https://standard.go.kr" target="_blank" title="국가표준인증 통합정보시스템">e나라표준인증</a></li>
+            <li><a href="https://www.kats.go.kr" target="_blank">국가기술표준원</a></li>
+            <li><a href="https://www.visitkorea.or.kr" target="_blank" title="한국관광공사">한국관광</a>·<a
+                    href="https://www.kca.go.kr" target="_blank" title="한국소비자원">소비자</a></li>
+            <li><a href="http://www.president.go.kr" target="_blank">청와대</a> /
+                <a href="https://www.seoul.go.kr" target="_blank">서울시</a>
+            </li>
+            <li><a href="https://www.dobong.go.kr" target="_blank">도봉구청</a>/<a
+                    href="https://www.dobong.go.kr/dong/?code=10008069" target="_blank" title="주민센터 쌍문3동">쌍문3</a>
+            </li>
+            <li><a href="https://bit.ly/439SeaQ" target="_blank" title="도봉구통합도서관">도</a><a href="https://bit.ly/3Bmihj0" target="_blank" title="도봉구통합도서관 동네">서</a><a href="https://elib.dobong.kr/" target="_blank" title="도봉구 전자책도서관">E</a><a href="https://www.unilib.dobong.kr/site/mylib/mybook02.do" target="_blank" title="도봉구통합도서관 내 서재">북</a><a href="https://elib.dobong.kr/Kyobo_T3/MyLibrary/MyLibrary_Borrow.asp" target="_blank" title="도봉구 전자책도서관 내 서재">·</a><a href="https://www.sblib.seoul.kr/library/menu/10013/program/30004/searchDetail.do" target="_blank" title="성북구통합도서관">성</a><a href="https://www.sblib.seoul.kr/library/menu/10063/program/30019/loanStatusList.do" target="_blank" title="성북구통합도서관 내 서재">북</a><a href="https://elibrary.sblib.seoul.kr/Kyobo_T3/Default.asp" target="_blank" title="성북정보도서관 전자책">E</a><a href="https://elibrary.sblib.seoul.kr/Kyobo_T3/MyLibrary/MyLibrary_Borrow.asp" target="_blank" title="성북정보도서관 전자책 내 서재">북</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>방송국</h4>
+                <ul class="submenu">
+                    <h4><a href="http://www.torrentmap.com/live/tv.php" target="_blank" title="실시간 방송 보기">동영상</a>/<a
+                            href="https://bit.ly/2H9lBmm" target="_blank" title="TV편성표">편성표</a>
+                        <a href="https://bit.ly/3B7B4O4" target="_blank" title="시청률 순위">1</a>
+                    </h4>
+                    <li><a href="http://tv.hobbang.net" target="_blank" title="호빵넷 실시간TV 모음">실시간</a>
+                        <a href="http://joovideo.net" target="_blank" title="JOOVIDEO">주비디오</a>
+                    </li>
+                    <li><a href="https://www.wavve.com" target="_blank">wavve</a>/
+                        <a href="https://www.tving.com" target="_blank">TVING</a>
+                    </li>
+                    <li><a href="http://www.dailymotion.com" target="_blank">dailymotion</a></li>
+                    <li><a href="http://afreeca.com" target="_blank">아프리카TV</a></li>
+                    <li><a href="https://watcha.com" target="_blank">왓챠</a>
+                        <a href="https://bit.ly/3oqgXpu" target="_blank">시사/교양</a>
+                    </li>
+                    <li><a href="https://bit.ly/3J35Kmy" target="_blank">드라마</a> /
+                        <a href="https://bit.ly/34zYsrE" target="_blank">예능</a>
+                    </li>
+                    <li><a href="https://www.netflix.com/kr" target="_blank">넷플릭스</a>
+                        <a href="https://www.coupangplay.com" target="_blank">쿠팡</a>
+                    </li>
+                    <li><a href="http://www.highlighttv.co.kr" target="_blank">하이라이트TV</a></li>
+                    <li><a href="https://bit.ly/2LtXwLn" target="_blank" title="바로찾기 동영상 사이트">동영상 사이트</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.sbs.co.kr" target="_blank" title="06번">SBS</a>
+                <a href="https://www.sbs.co.kr/schedule" target="_blank" title="편성표">편성</a>
+                <a href="https://www.sbs.co.kr/live/S01" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="http://www.kbs.co.kr" target="_blank" title="07 · 09번">KBS</a>
+                <a href="https://schedule.kbs.co.kr" target="_blank" title="편성표">편성</a>
+                <a href="https://onair.kbs.co.kr" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="http://www.imbc.com" target="_blank" title="11번">MBC</a>
+                <a href="https://schedule.imbc.com" target="_blank" title="편성표">편성</a>
+                <a href="https://onair.imbc.com/" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="https://jtbc.joins.com" target="_blank" title="15번">JTBC</a>
+                <a href="https://jtbc.joins.com/schedule?cloc=jtbc|header|guide" target="_blank" title="편성표">편성</a>
+                <a href="https://onair.jtbc.joins.com/" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="https://www.mbn.co.kr" target="_blank" title="16번">MBN</a>
+                <a href="https://www.mbn.co.kr/pages/schedule/scheduleCable.mbn" target="_blank" title="편성표">편성</a>
+                <a href="https://www.mbn.co.kr/vod/onair" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="http://www.ichannela.com" target="_blank" title="18번">채널A</a>
+                <a href="http://www.ichannela.com/com/cmm/schedule.do" target="_blank" title="편성표">편성</a>
+                <a href="http://www.ichannela.com/com/cmm/onair.do" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="http://www.tvchosun.com/home.cstv" target="_blank" title="TV조선 19번">조선</a>
+                <a href="http://broadcast.tvchosun.com/onair/schedule/today.cstv" target="_blank" title="편성표">편성</a>
+                <a href="http://broadcast.tvchosun.com/onair/on.cstv" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="https://www.ebs.co.kr" target="_blank" title="13번">EBS</a>
+                <a href="https://www.ebs.co.kr/schedule" target="_blank" title="편성표">편성</a>
+                <a href="https://www.ebs.co.kr/html/onair_tv1.html" target="_blank" title="실시간 방송">📺</a>
+            </li>
+            <li><a href="https://tvn.tving.com" target="_blank" title="tvN DRAMA/SHOW">tvN</a>
+                <a href="http://tvn.tving.com/tvn/schedule" target="_blank" title="편성표">편성</a>
+                <a href="https://www.tving.com/live/player/C00551" target="_blank" title="실시간 방송">📺</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>영화/공연/도서</h4>
+                <ul class="submenu">
+                    <h4>서점<a href="https://namu.wiki/w/서울특별시%20공공도서관%20목록" target="_blank" title="나무위키/도서관 목록">📚</a></h4>
+                    <li><a href="http://www.yes24.com" target="_blank">YES24</a>
+                        <a href="http://www.yes24.com" target="_blank" title="YES24 중고샵">중고</a>
+                        <a href="https://bit.ly/3gnZl94" target="_blank" title="YES24 중고 판매">팔기</a>
+                    </li>
+                    <li><a href="http://www.kyobobook.co.kr" target="_blank">교보문고</a>
+                        <a href="http://www.ypbooks.co.kr" target="_blank" title="영풍문고">영풍</a>
+                    </li>
+                    <li><a href="https://book.naver.com" target="_blank" title="네이버책 가격비교">네이버</a>
+                        <a href="http://www.bandinlunis.com" target="_blank" title="반디앤루니스">반디</a>
+                    </li>
+                    <li><a href="http://www.aladdin.co.kr" target="_blank" title="알라딘"><img src="https://image.aladin.co.kr/img/home/aladin.ico" class="fav"><!-- 알라딘 --></a>
+                        <a href="https://bit.ly/3onvfY0"
+                            target="_blank" title="알라딘 중고샵">중고</a>·<a href="https://bit.ly/3usqa4h" target="_blank"
+                            title="알라딘 중고 판매">판매</a>
+                            <a href="https://www.okbari.net" target="_blank" title="전자도서관 도서 검색">🔍</a></li>
+                    <li><a href="https://bit.ly/3rxPMe8" target="_blank">공연</a>·<a href="https://bit.ly/4hNiuQy"
+                            target="_blank">축제</a>·<a href="https://bit.ly/3NUSu7Q" target="_blank">스포츠</a></li>
+                    <li><a href="https://bit.ly/2DYpSqL" target="_blank">코엑스</a> /
+                        <a href="http://www.kintex.com" target="_blank">킨텍스</a>
+                    </li>
+                    <li><a href="http://www.akei.or.kr" target="_blank" title="한국전시산업진흥회">전시정보</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.maxmovie.com" target="_blank">맥스무비</a> /
+                <a href="https://bit.ly/3Hx26kr" target="_blank" title="영화 예매 사이트 보기">예매</a>
+            </li>
+            <li><a href="http://www.cgv.co.kr" target="_blank">CGV</a> /
+                <a href="http://www.megabox.co.kr" target="_blank">메가박스</a>
+            </li>
+            <li><a href="http://www.lottecinema.co.kr" target="_blank">롯데시네마</a> /
+                <a href="http://www.lottecinema.co.kr" target="_blank" title="TMDB">DB</a>
+            </li>
+            <li><a href="http://www.seoulcinema.com" target="_blank">서울극장</a></li>
+            <li><a href="https://www.kobis.or.kr" target="_blank" title="영화관입장통합전산망">KOBIS</a>
+                <a href="https://bit.ly/2VpFnCX" target="_blank" title="바로찾기 영화 사이트">영화</a>
+            </li>
+            <li><a href="https://bit.ly/2LxGaxj" target="_blank">인터파크</a></li>
+            <li><a href="http://www.ticketlink.co.kr" target="_blank">티켓링크</a></li>
+            <li><a href="http://ticket.yes24.com/" target="_blank">YES24 티켓</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>음악/이미지🎵</h4>
+                <ul class="submenu">
+                    <h4>앨범 커버/사진</h4>
+                    <li><a href="http://www.yes24.com/Mall/Main/Music" target="_blank" title="CD/LP 커버">YES24</a>
+                        <a href="http://www.kyobobook.co.kr/indexMuc.laf?mallGb=MUC" target="_blank"
+                            title="음반 커버">교보문고</a>
+                    </li>
+                    <li><a href="http://www.maniadb.com" target="_blank">mainadb</a>
+                        <a href="https://www.boom4u.net/lyrics" target="_blank">가사</a>
+                    </li>
+                    <li><a href="https://albumart.org" target="_blank" title="CD/DVD 커버">앨범art</a> <a
+                            href="https://openphoto.net" target="_blank" title="openphoto">오픈포토</a></li>
+                    <li><a href="http://www.slothradio.com/covers" target="_blank"
+                            title="앨범 커버 검색 - 아마존 기반">SlothRadio</a></li>
+                    <li><a href="https://images.google.com" target="_blank" title="CD/DVD 커버 검색 - 크기 설정">구글</a> /
+                        <a href="https://www.amazon.com" target="_blank" title="앨범 커버 검색">아마존</a>
+                    </li>
+                    <li><a href="https://pixabay.com" target="_blank">pixabay</a> /
+                        <a href="https://www.flickr.com" target="_blank">flickr</a>
+                    </li>
+                    <li><a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        <a href="https://www.pexels.com" target="_blank">Pexels</a>
+                    </li>
+                    <li><a href="https://artvee.com" target="_blank">Artvee</a> /
+                        <a href="https://www.behance.net" target="_blank">비헨스</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://music.bugs.co.kr" target="_blank">벅스</a>
+                <a href="http://www.melon.com" target="_blank">멜론</a>
+                <a href="https://www.genie.co.kr" target="_blank">지니</a>
+            </li>
+            <li><a href="https://www.music-flo.com" target="_blank">플로</a>
+                <a href="https://circlechart.kr" target="_blank">써클차트</a>
+            </li>
+            <li><a href="https://vibe.naver.com" target="_blank">바이브</a>
+                <a href="https://www.billboard.com" target="_blank">빌보드
+            </li>
+            <li><a href="http://www.mnet.com" target="_blank">엠넷</a> /
+                <a href="http://www.soribada.com" target="_blank">소리바다</a>
+            </li>
+            <li><a href="https://www.spotify.com" target="_blank">스포티파이</a>
+                <a href="https://open.spotify.com" target="_blank" title="스포티파이 이용 사이트 PC버전 접근">PC</a>
+            </li>
+            <li><a href="https://tidal.com" target="_blank">타이달</a> /
+                <a href="https://www.qobuz.com" target="_blank">코부즈</a>
+            </li>
+            <li><a href="https://bit.ly/2PTHglq" target="_blank" title="바로찾기 뮤직 사이트">뮤직 사이트</a></li>
+            <li><a href="https://bit.ly/2E28wcK" target="_blank" title="바로찾기 웹툰 사이트">웹툰 사이트</a></li>
+            <li><a href="https://www.musicscore.co.kr" target="_blank">악보·가게</a>/<a href="http://www.akbobada.com"
+                    target="_blank" title="악보바다">바다</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>공유커뮤니티</h4>
+                <ul class="submenu">
+                    <h4>공유커뮤니티2</h4>
+                    <li><a href="https://www.userbenchmark.com" target="_blank">유저벤치마크</a></li>
+                    <li><a href="https://www.passmark.com" target="_blank">패스마크</a></li>
+                    <li><a href="http://validator.kldp.org" target="_blank">웹마크업검증</a></li>
+                </ul>
+            </li>
+            <li><a href="https://github.com" target="_blank">Github</a></li>
+            <li><a href="https://stackoverflow.com" target="_blank">stackoverflow</a></li>
+            <li><a href="https://www.extendoffice.com" target="_blank">ExtendOffice</a></li>
+            <li><a href="https://docs.microsoft.com/ko-kr/officeupdates/current-channel" target="_blank"
+                    title="MS오피스 업데이트 정보">오피스업데이트</a></li>
+            <li><a href="https://insider.office.com/ko-kr/releasenotes/windows/slow" target="_blank"
+                    title="MS오피스 미리보기 정보">오피스 프리뷰</a></li>
+            <li><a href="https://insider.office.com/ko-kr/releasenotes/windows/fast" target="_blank"
+                    title="MS오피스 베타 보기 정보">MS오피스 베타</a></li>
+            <li><a href="https://www.emojiall.com/ko" target="_blank" title="MS®Update 카탈로그">MS®업뎃 정보</a></li>
+            <li><a href="https://www.emojiall.com/ko" target="_blank" title="이모지"><img src="https://www.emojiall.com/favicon.ico" class="fav">
+<!--                 이모지 --></a> /
+                <a href="https://docs.google.com/forms/u/0" target="_blank" title="구글 설문지">G설문</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>금융💰</h4>
+                <ul class="submenu">
+                    <h4><a href="https://search.zum.com/search.zum?query=바로찾기 카드 사이트" target="_blank"
+                            title="바로찾기 카드 사이트">재테크</a> | <a
+                            href="https://finlife.fss.or.kr/finlife/main/main.do?menuNo=700000" target="_blank"
+                            title="금융감독원">금감원</a></h4>
+                    <li><a href="https://fisis.fss.or.kr" target="_blank" title="금융감독원 금융통계정보시스템">금융통계정보</a></li>
+                    <li><a href="https://www.kfb.or.kr" target="_blank" title="금리(입출금X) 수수료">전국은행연합회</a></li>
+                    <li><a href="http://www.moneta.co.kr" target="_blank" title="금리(적금/예금) 입출금▼">MONETA</a>
+                        <a href="http://fundamoa.kofia.or.kr" target="_blank" title="펀드 다모아">펀드</a>
+                    </li>
+                    <li><a href="http://www.morningstar.co.kr" target="_blank"
+                            title="투자 데이터 제공, 주간 시황, 펀드 평가, 순위, 보고서, 뉴스, 환율 등">모닝스타코리아</a></li>
+                    <li><a href="https://www.funddoctor.co.kr" target="_blank">펀드닥터</a>
+                        <a href="https://www.google.com/finance" target="_blank" title="구글 금융">구글</a>
+                    </li>
+                    <li><a href="https://www.fsb.or.kr/ratedepo_0100.act" target="_blank"
+                            title="중앙회 소개, 햇살론, 대출, 예금 등 저축은행 상품, 경영공시, 금융계산기">저축은행중앙회</a></li>
+                    <li><a href="https://www.okcashbag.com" target="_blank" title="OK 캐쉬백">OK</a>
+                        <a href="https://fine.fss.or.kr" target="_blank" title="FINE 금융소비자 정보포털">파인</a>
+                        <a href="https://search.naver.com/search.naver?ie=UTF-8&query=기준금리" target="_blank"
+                            title="기준금리">금리</a>
+                    </li>
+                    <li><a href="http://bss.kfb.or.kr" target="_blank">은행통계정보</a></li>
+                    <li><a href="https://search.zum.com/search.zum?query=바로찾기 증권 사이트" target="_blank" title="바로찾기">증권
+                            사이트</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.shinhan.com" target="_blank">신한</a> /
+                <a href="https://www.wooribank.com" target="_blank">우리은행</a>
+            </li>
+            <li><a href="https://kbstar.com" target="_blank">KB국민</a>·<a href="https://www.kebhana.com"
+                    target="_blank">하나은행</a></li>
+            <li><a href="https://banking.nonghyup.com" target="_blank">농협</a>/
+                <a href="https://www.ibk.co.kr" target="_blank">기업은행</a>
+            </li>
+            <li><a href="https://www.epostbank.go.kr" target="_blank" title="우체국예금">우체국</a> / <a
+                    href="https://www.citibank.co.kr" target="_blank">CT뱅크</a></li>
+            <li><a href="https://www.standardchartered.co.kr" target="_blank">SC제일은행</a></li>
+            <li><a href="http://www.wooriib.com" target="_blank">우리종금</a></li>
+            <li><a href="https://bit.ly/2J9Mp8h" target="_blank" title="바로찾기">은행 사이트</a></li>
+            <li><a href="https://bit.ly/3scVkdd" target="_blank">신용</a><a href="https://card-search.naver.com"
+                    target="_blank" title="전체화면">카</a><a href="https://new-m.pay.naver.com/affiliate-card/home"
+                    target="_blank" title="New 전체화면">드</a>
+                <a href="https://www.card-gorilla.com" target="_blank" title="카드고릴라">🗂</a><a
+                    href="https://bit.ly/3OeqcUv" target="_blank" title="바로찾기 카드 사이트">💳️</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>교통📌</h4>
+                <ul class="submenu">
+                    <h4><a href="https://bit.ly/2H7muuC" title="바로찾기 지도 사이트" target="_blank">지도</a></h4>
+                    <li><a href="https://www.koreanair.com" target="_blank">대한항공</a></li>
+                    <li><a href="https://flyasiana.com" target="_blank">아시아나항공</a></li>
+                    <li><a href="https://map.ngii.go.kr" target="_blank">국토포탈</a></li>
+                    <li><a href="https://sgis.kostat.go.kr" target="_blank">통계지리정보</a></li>
+                </ul>
+            </li>
+            <li><a href="http://map.naver.com" target="_blank" title="네이버 지도">네이버🗺</a>
+                <a href="http://m.map.naver.com" target="_blank" title="네이버지도 모바일 버전">📱</a><a href="https://weather.naver.com/map/09320680" target="_blank" title="네이버 날씨 지도">☀</a><a href="https://weather.naver.com/map/09320680" target="_blank" title="네이버 지도/별별 저장소">⭐</a>
+            </li>
+            <li><a href="https://map.kakao.com" target="_blank">카카오맵</a>
+                <a href="https://m.map.kakao.com" target="_blank" title="카카오지도 모바일 버전">📱</a>
+            </li>
+            <li><a href="http://www.google.co.kr/maps" target="_blank" title="구글 지도">구글</a>
+                <a href="https://earth.google.com" target="_blank" title="구글 어스 - 지구본 지도"><img src="https://www.gstatic.com/earth/00-favicon.ico" class="fav"></a>
+                <a href="https://www.utic.go.kr/map/map.do?menu=cctv" target="_blank" title="경찰청 도시교통정보센터">CC</a><a
+                    href="https://bit.ly/42Crq2h" target="_blank" title="CCTV 도봉로(소피아호텔4거리) 도시교통정보센터">TV</a>
+            </li>
+            <li><a href="http://www.seoulmetro.co.kr/kr/cyberStation.do?menuIdx=538" target="_blank">서울메트로</a></li>
+            <li><a href="http://www.letskorail.com" target="_blank">KORAIL</a></li>
+            <li><a href="https://www.fivepin.co.kr/#route" target="_blank">아이비나비</a></li>
+            <li><a href="https://www.mapquest.com" target="_blank">맵퀘스트(세계)</a></li>
+            <li><a href="https://map.vworld.kr/map/maps.do" target="_blank">WORLD지도</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>맛집🍴</h4>
+                <ul class="submenu">
+                    <h4>맛집2</h4>
+                    <li><a href="https://www.pizzahut.co.kr" target="_blank">피자헛</a>
+                        <a href="https://web.dominos.co.kr" target="_blank" title="도미노피자">도미노</a><a href="https://namu.wiki/w/틀:대한민국의%20주요%20피자%20브랜드" target="_blank" title="틀:대한민국의 주요 피자 브랜드">🍕</a></li>
+                    <li><a href="http://www.mrpizza.co.kr" target="_blank" title="미스터피자">미스터🍕</a></li>
+                    <li><a href="https://www.hsd.co.kr" target="_blank">한솥도시락</a></li>
+                    <li><a href="https://www.siksinhot.com" target="_blank">홍마반점</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.menupan.com" target="_blank">메뉴판</a></li>
+            <li><a href="http://www.diningcode.com" target="_blank">다이닝코드</a></li>
+            <li><a href="http://www.mcdonalds.co.kr" target="_blank" title="맥도날드"><img src="https://www.mcdonalds.co.kr/kor/images/favicon.ico" class="fav"><!--맥도날드 --></a>
+                <a href="http://www.lotteria.com" target="_blank">롯데리아</a><a href="https://namu.wiki/w/틀:대한민국의%20주요%20햄버거%20브랜드" target="_blank" title="틀:대한민국의 주요 햄버거 브랜드">🍔</a></li>
+            <li><a href="https://www.burgerking.co.kr" target="_blank">버거킹</a> /
+                <a href="https://www.kfckorea.com" target="_blank">KFC🍔</a>
+            </li>
+            <li><a href="http://www.momstouch.co.kr" target="_blank" title="맘스터치">맘스🍔</a>
+                <a href="https://www.popeyes.co.kr" target="_blank" title="파파이스">파파🍔</a></li>
+            <li><a href="http://www.shakeshack.kr" target="_blank" title="쉐이크쉑">쉑쉑🍔</a><a href="https://www.fiveguys.co.kr" target="_blank" title="파이브 가이즈 버거">5맨🍔</a></li>
+            <li><a href="https://www.nobrandburger.com" target="_blank" title="노브랜드 버거">노버거</a>
+                <a href="http://www.moskorea.kr" target="_blank" title="모스버거">모스🍔</a>
+            </li>
+            <li><a href="http://superduperburger.co.kr" target="_blank" title="슈퍼두퍼">슈두퍼🍔</a>·<a href="https://map.naver.com/p/search/폴트버거" target="_blank" title="폴트버거">폴트🍔</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>카페/제과 🍦</h4>
+                <ul class="submenu">
+                    <h4>디저트</h4>
+                    <li><a href="http://www.baskinrobbins.co.kr" target="_blank">배스킨라빈스🍦</a></li>
+                    <li><a href="http://www.natuur.co.kr" target="_blank">나뚜르🍦</a></li>
+                    <li><a href="https://www.haagendazs.co.kr" target="_blank">하겐다즈🍦</a></li>
+                    <li><a href="https://sulbing.com" target="_blank">설빙🍨</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.gong-cha.co.kr" target="_blank">공차</a> /
+                <a href="http://www.osulloc.com" target="_blank">오설록</a>
+                <a href="https://namu.wiki/w/틀:차", target="_blank" title="틀:차(Tea)">🍵</a>
+            </li>
+            <li><a href="http://www.istarbucks.co.kr" target="_blank" ><!-- <img src=https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" class="fav"> -->스타벅스</a> /
+                <a href="https://www.twosome.co.kr" target="_blank" title="🇰🇷">투썸</a><a href="https://namu.wiki/w/틀:커피%20관련%20문서", target="_blank" title="틀:커피/체인점 관련 나무위키 문서">☕</a>
+            </li>
+            <li><a href="https://www.hollys.co.kr" target="_blank" title="🇰🇷">할리스</a> /
+                <a href="https://www.tomntoms.com" target="_blank" title="🇰🇷">탐앤탐스</a>
+            </li>
+            <li><a href="https://www.lottegrs.com/kor/business/angelinus.jsp" target="_blank" title="🇰🇷">엔제리너스</a>/<a href="https://www.baristapaulbassett.co.kr" target="_blank" title="🇰🇷">풀바셋</a>
+            </li>
+            <li><a href="https://www.illycaffe.co.kr" target="_blank" title="🇮🇹">일리카페</a>/<a href="https://www.caffe-pascucci.co.kr/" target="_blank" title="🇮🇹">파스쿠찌</a>
+            </li>
+            <li><a href="https://kr.bluebottlecoffee.com" target="_blank" title="🇺🇸">블루보틀</a> /
+                <a href="https://www.coffeebeankorea.com" target="_blank" title="🇺🇸">커피빈</a>
+            </li>
+            <li><a href="https://terarosa.com" target="_blank" title="🇰🇷">테레로사</a></li>
+            <li><a href="https://www.paris.co.kr" target="_blank" title="파리바게트🍞">파리🍞</a>
+                <a href="https://www.tlj.co.kr:7008/index.asp" target="_blank">뚜레쥬르</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>치킨🐔</h4>
+                <ul class="submenu">
+                    <h4><a href="https://namu.wiki/w/틀:대한민국의%20주요%20치킨%20브랜드" target="_blank" title="틀:대한민국의 주요 치킨 브랜드">치킨2</a></h4>
+                    <li><a href="https://www.cknia.com/main/" target="_blank">치킨매니아</a></li>
+                    <li><a href="http://www.kkanbu.co.kr" target="_blank">8깐부치킨</a></li>
+                    <li><a href="http://www.bodram.com" target="_blank">보드람치킨</a></li>
+                    <li><a href="http://www.cheogajip.co.kr" target="_blank">처갓집양념치킨</a></li>
+                    <li><a href="https://www.toreore.com" target="_blank">또래오래치킨</a></li>
+                    <li><a href="http://www.chickenthehome.co.kr" target="_blank">치킨더홈</a></li>
+                    <li><a href="http://www.9922.co.kr" target="_blank">호식이치킨</a></li>
+                    <li><a href="http://www.goobne.co.kr" target="_blank">6굽네치킨</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.60chicken.com" target="_blank" title="크크크치킨">60계치킨</a></li>
+            <li><a href="https://www.bbq.co.kr" target="_blank" title="황금올리브유">7BBQ치킨</a></li>
+            <li><a href="http://www.kyochon.com" target="_blank" title="허니/레드">1교촌치킨</a></li>
+            <li><a href="" target="_blank">푸라닭</a></li>
+            <li><a href="https://pelicana.co.kr" target="_blank" title="페리카나 치킨 5위">5페리</a>·<a href="https://www.mexicana.co.kr:50010" target="_blank" title="멕시카나 치킨 4위">카나4</a></li>
+            <li><a href="http://www.bhc.co.kr" target="_blank" title="뿌링클">2BHC치킨</a></li>
+            <li><a href="https://nenechicken.com" target="_blank" title="스노윙">네네치킨</a></li>
+            <li><a href="http://www.gcova.co.kr" target="_blank">지코바치킨</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>패션/잡화 👕</h4>
+                <ul class="submenu">
+                    <h4>모터/바이크</h4>
+                    <li><a href="http://www.velofix.co.kr" target="_blank">velofix</a></li>
+                </ul>
+            </li>
+            <li><a href="https://store-kr.uniqlo.com" target="_blank">유니클로</a> /
+                <a href="https://www.zara.com/kr" target="_blank">자라</a>
+            </li>
+            <li><a href="https://tbhshop.co.kr/main/mind-men?family_site=mind_bridge_men" target="_blank" title="마인드브릿지">마인</a><a href="https://brand.naver.com/mindbridge" target="_blank" title="마인드브릿지 스마트스토어">드</a>
+                <a href="http://www.stco.co.kr" target="_blank" title="STCO">ST</a><a href="https://smartstore.naver.com/stco_official" target="_blank" title="STCO 스마트스토어">CO</a>
+            </li>
+            <li><a href="https://abcmart.a-rt.com" target="_blank" title="ABC 마트">AB</a><a href="https://smartstore.naver.com/abcmartkorea" target="_blank" title="ABC 마트 스마트스토어">C</a>
+                <a href="https://folderstyle.com" target="_blank" title="폴더">폴</a><a href="https://shopping.naver.com/window/brand-fashion/store/100297636" target="_blank" title="폴더 스마트스토어">더</a>
+                <a href="http://shoopen.elandmall.com" target="_blank" title="슈펜">슈</a><a href="https://brand.naver.com/shoopen" target="_blank" title="슈펜 스마트스토어">펜</a><a href="https://prod.danawa.com/list/?cate=18354655" target="_blank" title="슈펜 다나와">·</a>
+            </li>
+            <!-- 04 --><li><a href="https://prod.danawa.com/list/?cate=18342368" target="_blank">러닝화</a>
+                <a href="https://prod.danawa.com/list/?cate=18342369" target="_blank">워킹화</a>
+            </li>
+            <!-- 05 --><li><a href="https://prod.danawa.com/list/?cate=18342370" target="_blank" title="트레이닝화">근력</a>
+                <a href="https://prod.danawa.com/list/?cate=18342376&searchOption=/searchAttributeValue=1004518" target="_blank" title="배드민턴화">셔틀콕</a>
+            </li>
+            <!-- 06 --><li><a href="https://prod.danawa.com/list/?cate=18342372" target="_blank" title="캐주얼운동화">👟</a>·<a href="https://prod.danawa.com/list/?cate=18342378" target="_blank" title="방한슈즈">방한</a>
+                <a href="https://prod.danawa.com/list/?cate=18342430&searchOption=/searchAttributeValue=261993" target="_blank" title="기능성 깔창">깔창</a>·<a href="https://prod.danawa.com/list/?cate=18342430&searchOption=/searchAttributeValue=339586" target="_blank" title="신발끈">끈</a>
+            </li>
+            <!-- 07 --><li><a href="https://www.kumkangshoe.com" target="_blank">금강제화</a>
+                <a href="https://prod.danawa.com/list/?cate=18242390" target="_blank">구두</a>
+            </li>
+            <!-- 08 --><li><a href="https://prod.danawa.com/list/?cate=17231661" target="_blank">옷걸이</a>
+                <a href="https://www.mawakorea.com" target="_blank" title="마와">마</a><a href="https://brand.naver.com/mawakorea" target="_blank" title="마와 스마트스토어">와</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>스포츠의류👟</h4>
+                <ul class="submenu">
+                    <h4>아웃도어</h4>
+                    <li><a href="https://www.thenorthfacekorea.co.kr" target="_blank">노스페이스</a> /
+                        <a href="http://www.k2.co.kr" target="_blank">K2</a>
+                    </li>
+                    <li><a href="https://blackdiamondequipment.co.kr" target="_blank">블랙다이아몬드</a></li>
+                    <li><a href="https://www.nepamall.com" target="_blank">네파</a> /
+                        <a href="http://www.blackyak.com" target="_blank">블랙야크</a>
+                    </li>
+                    <li><a href="http://www.eider.co.kr" target="_blank">아이더</a>
+                        <a href="https://prod.danawa.com/list/?cate=18242407&searchOption=/searchBrand=10942" target="_blank">팀버랜드</a></li>
+                    <!-- 05 --><li><a href="https://www.salomon.com/fr-fr" target="_blank" title="살로몬 프랑스🇫🇷">살</a><a href="https://www.salomon.com/en-gb" target="_blank" title="살로몬 글로벌">로</a><a href="https://salomon.co.kr" target="_blank" title="살로몬 한국🇰🇷">몬</a>
+                        <a href="https://en-at.scarpa.com/" target="_blank" title="스카르파 오스트리아🇦🇹">스카</a><a href="https://brand.naver.com/scarpa" target="_blank" title="스카르파 스마트스토어">르</a><a href="https://prod.danawa.com/list/?cate=18242367&searchOption=/searchBrand=10457014" target="_blank" title="스카르파 다나와">파</a></li>
+                <!-- 06 --><li><a href="https://arcteryx.com/ca/en" target="_blank" title="아크테릭스 캐나다🇨🇦">아크</a><a href="https://arcteryx.co.kr" target="_blank" title="아크테릭스 한국🇰🇷">테릭스</a></li>
+                <li><a href="https://www.lfmall.co.kr/app/exhibition/brandGroup/1001?brandUrl=DAKS&saleType=1%2C3" target="_blank" title="닥스 공식 LF몰">닥</a><a href="https://brand.naver.com/daks" target="_blank" title="닥스">스</a><a href="https://prod.danawa.com/list/?cate=18242407&searchOption=/searchBrand=6368" target="_blank" title="닥스 신발">👞</a><a href="https://smartstore.naver.com/daks_official" target="_blank" title="닥스 셔츠 스마트스토어">👕</a></li>
+                <li><a href="https://blackdiamondequipment.co.kr" target="_blank">블랙다이아몬드</a></li>
+                </ul>
+            </li>
+            <!-- 01 --><li><a href="https://www.nike.com/kr" target="_blank" title="나이키"><img src="https://www.nike.com/favicon.ico" class="fav"><!--나이키--></a><a href="https://prod.danawa.com/list/?cate=18342408" target="_blank" title="나이키 다나와">나이키</a> /
+                <a href="https://kr.puma.com" target="_blank">푸마</a>
+            </li>
+            <!-- 02 --><li><a href="https://shop.adidas.co.kr" target="_blank" title="아디다스">아디다</a><a href="https://prod.danawa.com/list/?cate=18342409" target="_blank" title="아디다스 다나와">스</a> /
+                <a href="https://shop.reebok.co.kr" target="_blank">리복</a>
+            </li>
+            <!-- 03 --><li><a href="https://www.underarmour.co.kr" target="_blank">언더아머</a> /
+                <a href="https://www.fila.co.kr" target="_blank">필라</a>
+            </li>
+            <!-- 04 --><li><a href="https://www.skecherskorea.co.kr" target="_blank">스케쳐스</a> /
+                <a href="https://www.nbkorea.com" target="_blank" title="뉴발란스">NB</a>
+            </li>
+            <!-- 05 --><li><a href="https://www.asics.com/kr" target="_blank">아식스</a> /
+                <a href="https://www.converse.co.kr" target="_blank">컨버스</a>
+            </li>
+            <!-- 06 --><li><a href="https://www.columbiakorea.co.kr" target="_blank">콜롬비아스포츠</a></li>
+            <!-- 07 --><li><a href="http://www.diadorakorea.com" target="_blank">디아도라</a>
+                <a href="https://bit.ly/2X4nOWt" target="_blank" title="프로스펙스">프로s</a></li>
+            <!-- 08 --><li><a href="https://prod.danawa.com/list/?cate=18342412" target="_blank" title="">락포트</a>·<a href="https://prod.danawa.com/list/?cate=18342419" target="_blank" title="닥터마틴">닥터마틴</a>
+                <a href="https://prod.danawa.com/list/?cate=18341284" target="_blank" title="">탠디</a>·<a href="https://prod.danawa.com/list/?cate=18342416" target="_blank" title="오니츠카타이거">오니츠카🐅</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>쇼핑🛒</h4>
+                <ul class="submenu">
+                    <h4>쇼핑(해외)</h4>
+                    <li><a href="https://www.amazon.com" target="_blank">아마</a><a href="https://amz.run/5xGk"
+                            target="_blank" title="아마존 딜">존</a>
+                        <a href="https://www.amazon.co.uk" target="_blank" title="영국 아마존">🇬🇧</a>
+                        <a href="https://www.amazon.co.jp" target="_blank" title="일본 아마존">🇯🇵</a>
+                        <a href="https://www.amazon.de" target="_blank" title="독일 아마존">🇩🇪</a>
+                    </li>
+                    <li><a href="https://ko.aliexpress.com" target="_blank" title="알리익스프레스">알리</a>
+                        <a href="https://www.temu.com/kr" target="_blank">테무</a>
+                    </li>
+                    <li><a href="https://www.rakuten.co.jp" target="_blank">라쿠텐</a></li>
+                    <li><a href="https://www.ebay.com" target="_blank">이베이</a>
+                        <a href="https://www.ebay.de" target="_blank" title="독일 이베이">🇩🇪</a>
+                    </li>
+                    <li><a href="https://www.taobao.com" target="_blank">타오바오</a></li>
+                    <li><a href="https://www.1688.com" target="_blank">알리바바</a></li>
+                    <li><a href="https://www.tmall.com" target="_blank">티몰</a></li>
+                </ul>
+            </li>
+            <li><a href="http://shopping.naver.com" target="_blank" title="네이버 쇼핑 / 옵션O 적은편">네</a><a href="https://shopping.naver.com/ns/home" target="_blank" title="네이버 스마트스토어 / 옵션O 적은편">이</a><a href="https://search.shopping.naver.com/home" target="_blank" title="네이버 가격비교 / 옵션O 적은편">버</a> <a
+                    href="https://shoppinghow.kakao.com" target="_blank" title="카카오 가격비교. 옵션O 적은편">쇼핑하우</a>
+            </li>
+            <li><a href="http://www.danawa.com" target="_blank" title="옵션O 많은편">다나와</a><a
+                    href="http://prod.danawa.com/info/popup/termDicPopup.php?searchText=" target="_blank"
+                    title="용어 검색, 인증 등 설명 - 다나와">🔍</a><a href="http://www.enuri.com" target="_blank"
+                    title="옵션O 많은편">에누리</a></li>
+            <li><a href="http://www.11st.co.kr" target="_blank" title="옵션X">11번가</a>
+                <a href="http://www.interpark.com" target="_blank" title="옵션X">인터파크</a>
+            </li>
+            <li><a href="https://www.11st.co.kr/amazon" target="_blank">아마존</a>
+                <a href="https://www.11st.co.kr/amazon/deal" target="_blank" title="아마존 딜">딜</a>
+                <a href="https://www.11st.co.kr/amazon/best" target="_blank" title="아마존 인기">인기</a>
+            </li>
+            <li><a href="http://www.gmarket.co.kr" target="_blank" title="옵션O 보통">G마켓</a> ·<a
+                    href="http://www.auction.co.kr" target="_blank" title="옵션X">옥션</a></li>
+            <li><a href="https://www.pping.kr" target="_blank" title="가격비교">행복쇼핑</a> /
+                <a href="https://www.qoo10.com" target="_blank" title="해외직구">Q10</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>소셜커머스 📺</h4>
+                <ul class="submenu">
+                    <h4>가전/가구</h4>
+                    <li><a href="http://prod.danawa.com/list/?cate=1022811" target="_blank">TV</a> /
+                        <a href="http://prod.danawa.com/list/?cate=1024257" target="_blank">오디오</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=102110" target="_blank">주방</a> /
+                        <a href="http://prod.danawa.com/list/?cate=102738" target="_blank">계절가전</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=102207" target="_blank">생활가전</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=10226034" target="_blank">미용/욕실가전</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1523647" target="_blank">의자🪑</a> /
+                        <a href="http://prod.danawa.com/list/?cate=15235875" target="_blank">책상</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1523401" target="_blank">침대🛏</a> /
+                        <a href="http://prod.danawa.com/list/?cate=15236018" target="_blank">쇼파</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=15235976" target="_blank">수납</a> /
+                        <a href="http://prod.danawa.com/list/?cate=15239576" target="_blank">주방가구</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=14237308" target="_blank"
+                            title="글루건/실리콘건/납땜/용접공구/작업향상공구">측정</a> /
+                        <a href="http://prod.danawa.com/list/?cate=14235776" target="_blank"
+                            title="멀티탭/드라이버/안전용품">수공구</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://www.couponchart.co.kr" target="_blank" title="옵션X">쿠폰차트</a></li>
+            <li><a href="http://www.coupang.com" target="_blank" title="옵션O 보통">쿠팡</a>·<a
+                    href="http://www.ticketmonster.co.kr" target="_blank" title="티켓몬스터. 옵션X">티몬</a>·<a
+                    href="http://www.wemakeprice.com" target="_blank" title="옵션X">위메프</a></li>
+            <li><a href="https://www.ssg.com" target="_blank" title="신세계몰. 옵션O 보통">SSG</a> /
+                <a href="https://www.lotteon.com" target="_blank" title="롯데몰. 옵션X">롯데ON</a>
+            </li>
+            <li><a href="https://store.kakao.com" target="_blank" title="카카오톡 쇼핑. 옵션X">카카오</a> / <a href="http://www.ajjuncmall.com" target="_blank">전시몰</a></li>
+            <li><a href="https://www.starfield.co.kr/hanam/main.do" target="_blank" title="스타필드 하남점">스</a><a href="https://www.starfield.co.kr/coexmall/main.do#none" target="_blank" title="스타필드 코엑스몰">타</a><a href="https://www.starfield.co.kr/suwon/main.do" target="_blank" title="스타필드 수원점">필</a><a href="https://www.starfield.co.kr/goyang/main.do" target="_blank" title="스타필드 고양점">드</a>·<a href="https://www.shinsegae.com/store/main.do?storeCd=SC00002" target="_blank" title="신세계 백화점 강남점">신</a><a href="https://www.shinsegae.com/store/main.do?storeCd=SC00001" target="_blank" title="신세계 백화점 명동 본점">세</a><a href="https://www.shinsegae.com/store/main.do?storeCd=SC00010" target="_blank" title="신세계 백화점 의정부점">계</a></li>
+            <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00140000" target="_blank" title="더현대 서울">더</a><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00122000" target="_blank" title="현대백화점 삼성역 무역센터점">현</a><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000" target="_blank" title="현대백화점 목동점">대</a><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00126000" target="_blank" title="현대백화점 천호점">백</a><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00148000" target="_blank" title="현대백화점 판교점">화</a><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00121000" target="_blank" title="현대백화점 압구정 본점">점</a><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00178000" target="_blank" title="현대 프리미엄 아울렛 SPACE 1 남양주점">1</a><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00174000" target="_blank" title="현대 프리미엄 아울렛 송도점">2</a><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00172000" target="_blank" title="현대 프리미엄 아울렛 김포점">3</a><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00171000" target="_blank" title="현대 아울렛 가산점">·</a></li>
+            <li><a href="https://www.lwt.co.kr" target="_blank" title="롯데타워몰">롯</a><a href="https://www.lotteshopping.com/store/main?cstrCd=0001" target="_blank" title="롯데 백화점 명동 본점">데</a><a href="https://www.lotteshopping.com/store/main?cstrCd=0002" target="_blank" title="롯데 백화점 잠실점">몰</a>·<a href="https://www.lotteshopping.com/store/main?cstrCd=0349" target="_blank" title="롯데 백화점 타임빌라스 수원점">백</a><a href="https://www.lotteshopping.com/store/main?cstrCd=0399" target="_blank" title="롯데 백화점 동탄점">화</a><a href="https://www.lotteshopping.com/store/main?cstrCd=0344" target="_blank" title="롯데 백화점 인천점">점</a></li>
+            <li><a href="https://www.timessquare.co.kr/web/www/home" target="_blank" title="타임스퀘어">타임스퀘어</a>/<a href="https://www.hdc-iparkmall.com/main/index.do" target="_blank" title="IPARK몰">i파크</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>편의점/마트</h4>
+                <ul class="submenu">
+                    <h4>대형마트</h4>
+                    <li><a href="https://homeplus.co.kr" target="_blank">홈플러스</a>
+                        <a href="https://bit.ly/3xOgB0N" target="_blank" title="홈플러스 행사 전단지">행사</a>
+                    </li>
+                    <li><a href="https://emart.ssg.com/" target="_blank">이마트</a>
+                        <a href="http://store.emart.com/news/leaflet.do?division=2" target="_blank"
+                            title="이마트 행사 전단지">행사</a>
+                    </li>
+                    <li><a href="http://www.nonghyupmall.com" target="_blank">하나로마트</a>
+                        <a href="http://www.nonghyupmall.com/BC29000R/exhFlyerEvList.nh" target="_blank"
+                            title="하나로마트 행사 전단지">행사</a>
+                    </li>
+                    <li><a href="https://www.elandretail.com" target="_blank">뉴코아</a>
+                        <a href="https://bit.ly/32ZlUOx" target="_blank" title="뉴코아 일산점">일산</a>
+                    </li>
+                    <li><a href="https://bit.ly/2YjqAqC" target="_blank">롯데마트</a></li>
+                    <li><a href="https://www.costco.co.kr/events" target="_blank">코스트코</a>
+                        <a href="https://www.costco.co.kr/events" target="_blank" title="코스트코 일산">일산</a>
+                    </li>
+                    <li><a href="http://store.traders.co.kr/coupon/coupon02.jsp" target="_blank">트레이더스</a></li>
+                    <li><a href="https://bit.ly/2VQ9ino" target="_blank">빅마켓</a>
+                        <a href="https://bit.ly/2VQ9ino" target="_blank" title="빅마켓 킨텍스">킨텍스</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://cu.bgfretail.com" target="_blank">CU</a>
+                <a href="http://gs25.gsretail.com" target="_blank">GS25</a></li>
+            <li><a href="http://www.7-eleven.co.kr" target="_blank" title="세븐일레븐">7-11</a>
+                <a href="https://www.ministop.co.kr" target="_blank">미니스톱</a></li>
+            <li><a href="https://www.emart24.co.kr" target="_blank">이마트24</a></li>
+            <li></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>펜시/문구</h4>
+                <ul class="submenu">
+                    <h4>아이템</h4>
+                    <li><a href="https://www.locknlock.com" target="_blank" title="락앤락 자사홈">락</a><a href="https://www.locknlockmall.com" target="_blank" title="락앤락 몰">앤</a><a href="https://brand.naver.com/locknlock" target="_blank" title="락앤락 스마트스토어">락</a>
+                        <a href="https://www.ikomax.com" target="_blank" title="코멕스">코멕</a><a href="https://brand.naver.com/komax" target="_blank" title="코멕스 스마트스토어">스</a>
+                    </li>
+                    <li><a href="https://www.neoflam.co.kr" target="_blank" title="네오플렘 몰">네오</a><a href="https://brand.naver.com/neoflam" target="_blank" title="네오플렘 스마트스토어">플렘</a>
+                        <a href="https://www.glasslockmall.co.kr" target="_blank" title="삼광 글라스몰">글라</a><a href="https://brand.naver.com/glasslock" target="_blank" title="삼광 글라스 스마트스토어">스</a>
+                    </li>
+                    <li><a href="https://m.bbocute.com" target="_blank" title="뽀큐트 몰">뽀큐</a><a href="http://www.youtube.com/@뽀큐트" target="_blank" title="뽀큐트 유튜브">트</a>
+                        <a href="https://www.priceclub.co.kr" target="_blank">priceclub</a></li>
+                    <li><a href="http://koreamg.com" target="_blank">대한문구</a>·<a href="http://munguland.com"
+                            target="_blank" title="문구랜드/승진문구">랜드</a></li>
+                    <li><a href="http://pendepot.co.kr" target="_blank">펜디포</a>·<a href="http://www.japan9.co.kr" target="_blank">제팬9</a>·<a href="http://www.nippen.co.kr" target="_blank">니펜</a></li>
+                    <li><a href="http://www.megaffice.co.kr" target="_blank">메가피스</a>
+                        <a href="https://rnbfancy.co.kr" target="_blank">RnB</a></li>
+                    <li><a href="https://www.schezade.co.kr" target="_blank" title="셰에라자드">셰라자드</a>
+                        <a href="https://www.earphoneshop.co.kr" target="_blank" title="이어폰샵">이어폰</a></li>
+                    <li><a href="https://www.soundcat.co.kr" target="_blank" title="사운드캣">사운드</a><a href="http://zound.co.kr" target="_blank" title="사운드캣 몰">캣</a>
+                        <a href="https://www.sorishop.com" target="_blank" title="소리샵">소리</a><a href="https://www.sorishop.com" target="_blank" title="소리샵 스마트스토어">샵</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://www.funshop.co.kr" target="_blank" title="FunShop">펀샵</a>
+                <a href="http://www.10x10.co.kr" target="_blank" title="텐바이텐">10×10</a></li>
+            <li><a href="https://makers.kakao.com" target="_blank">카카오메이커스</a></li>
+            <li><a href="https://www.daiso.co.kr" target="_blank" title="다이소">다이소</a><a href="http://www.daisomall.co.kr" target="_blank" title="다이소몰">몰</a></li>
+            <li><a href="https://www.ikea.com" target="_blank">이케아</a><a href="https://www.ikea.com/kr/ko"
+                target="_blank">🇰🇷</a>·<a href="https://company.hanssem.com" target="_blank" title="공식 사이트">한</a><a
+            href="https://store.hanssem.com" target="_blank" title="한샘몰">샘</a><a
+                href="https://brand.naver.com/hanssemmall" target="_blank" title="한샘 스마트스토어">몰</a><a
+                href="https://smartstore.naver.com/hansseem" target="_blank" title="한샘 스마트스토어">2</a>
+            </li>
+            <li><a href="https://www.sivillage.com/jaju/main/initMain.siv" target="_blank" title="JAJU몰">JA</a><a href="https://brand.naver.com/jaju" target="_blank" title="JAJU 스마트스토어">JU</a>
+                <a href="https://www.muji.com/jp" target="_blank" title="MUJI 🇯🇵">MUJI</a>
+                <a href="https://www.muji.com/kr" target="_blank" title="MUJI 🇰🇷">🇰🇷</a>
+                <a href="https://www.mujikorea.net" target="_blank" title="한국 MUJI">1</a>·<a href="https://brand.naver.com/mujikorea" target="_blank" title="MUJI 스마트스토어">2</a>
+            </li>
+            <li><a href="https://www.mhmall.co.kr" target="_blank" title="모던하우스">모던</a><a href="https://modernhouse.elandmall.co.kr/" target="_blank" title="모던하우스">집</a>
+                <a href="https://ohou.se" target="_blank" title="오늘의집">오늘집</a>
+            </li>
+            <li><a href="http://www.alpha.co.kr" target="_blank">알파문구</a></li>
+            <li><a href="http://www.mgstore.co.kr" target="_blank">모닝글로리</a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>홈쇼핑</h4>
+                <ul class="submenu">
+                    <h4>T-커머스</h4>
+                    <li><a href="http://www.shinsegaetvshopping.com" target="_blank">신세계TV쇼핑</a></li>
+                    <li><a href="https://www.kshop.co.kr" target="_blank" title="KT알파 쇼핑">K쇼핑</a></li>
+                    <li><a href="https://www.gsshop.com/shop/gsmyshop/index.gs" target="_blank">GS<span
+                                style="color:green">MY</span>쇼핑</a></li>
+                    <li><a href="http://www.skstoa.com" target="_blank">SK스토아</a></li>
+                    <li><a href="https://www.shoppingntmall.com" target="_blank">쇼핑엔티</a></li>
+                    <li><a href="https://www.w-shopping.co.kr" target="_blank">W쇼핑</a></li>
+                    <li><a href="https://bit.ly/2QbtpJg" target="_blank">NS샵+</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.hsmoa.com" target="_blank">홈쇼핑모아</a></li>
+            <li><a href="http://www.hnsmall.com" target="_blank">홈&쇼핑</a></li>
+            <li><a href="http://display.cjmall.com" target="_blank" title="옵션X">CJ오쇼핑</a></li>
+            <li><a href="http://www.lotteimall.com" target="_blank">롯데홈쇼핑</a></li>
+            <li><a href="https://www.gsshop.com" target="_blank">GS쇼핑</a></li>
+            <li><a href="https://bit.ly/2WsKgbg" target="_blank">현대홈쇼핑</a></li>
+            <li><a href="https://bit.ly/2vP2ho1" target="_blank">공영쇼핑</a></li>
+            <li><a href="http://www.nsmall.com" target="_blank">NS홈쇼핑</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>뷰티/헬스</h4>
+                <ul class="submenu">
+                    <h4><a href="http://prod.danawa.com/list/?cate=16225244" target="_blank" title="식약처인증 영양제">헬스</a>
+                    </h4>
+                    <li><a href="http://prod.danawa.com/list/?cate=1622280" target="_blank">영양제</a> /
+                        <a href="http://prod.danawa.com/list/?cate=1622278" target="_blank">비타민</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1622276" target="_blank">홍삼/인삼/녹용</a></li>
+                    <li><a href="https://prod.danawa.com/list/?cate=16245631" target="_blank" title="단백질 보충제">헬</a><a
+                            href="https://prod.danawa.com/list/?cate=16246709" target="_blank" title="단백질 바/간식">스</a>
+                        <a href="https://prod.danawa.com/list/?cate=16245631" target="_blank">다이어트</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16225855" target="_blank">이너뷰티</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16216017" target="_blank">건강즙</a> /
+                        <a href="https://kr.iherb.com/" target="_blank" title="미국 보충제 해외직구">iHerb</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16216052" target="_blank">환/분말/환자식</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16216030" target="_blank">꿀/프로폴리스</a></li>
+                    <li><a href="http://www.bodyx.co.kr" target="_blank" title="바디엑스">바디X</a></li>
+                    <!-- 구강 -->
+                    <li><a href="https://prod.danawa.com/list/?cate=17247335" target="_blank" title="칫솔">칫</a><a href="https://prod.danawa.com/list/?cate=17336471" target="_blank" title="치실">솔</a>
+                        <a href="https://prod.danawa.com/list/?cate=17326960" target="_blank" title="혀클리너">👅</a>
+                        <a href="https://prod.danawa.com/list/?cate=17347344" target="_blank" title="치간 칫솔">치간</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17237080" target="_blank" title="치약">치</a><a href="https://prod.danawa.com/list/?cate=17237080&searchOption=/searchAttributeValue=985957" target="_blank" title="고불소">약</a>·<a href="https://prod.danawa.com/list/?cate=17237080&searchOption=/searchAttributeValue=180545" target="_blank" title="시린이">🦷</a>·<a href="https://prod.danawa.com/list/?cate=17237080&searchOption=/searchAttributeValue=181521" target="_blank" title="어린이">아동</a>·<a href="https://prod.danawa.com/list/?cate=17347350" target="_blank" title="칫솔 휴대용">휴대</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://www.oliveyoung.co.kr" target="_blank">올리브영</a>
+                <a href="http://www.sidmool.com" target="_blank">시드물</a></li>
+            <li><a href="https://uk.lush.com" target="_blank" title="영국">러</a><a href="https://www.lushusa.com" target="_blank" title="미국 러쉬">쉬</a><a href="https://lush.co.kr" target="_blank" title="한국 러쉬">🇰🇷</a>
+                <a href="https://www.thebodyshop.com/en-gb" target="_blank" title="영국">바디</a><a href="https://www.thebodyshop.com/en-us" target="_blank" title="미국 바디샵">샵</a><a href="https://www.thebodyshop.co.kr" target="_blank" title="한국 바디샵">🇰🇷</a>
+            </li>
+            <li><a href="https://www.oasis.co.kr" target="_blank" title="유기농마켓">오아시스마켓</a>·<a
+                    href="https://www.kurly.com" target="_blank" title="마켓컬리">컬</a></li>
+            <li><a href="https://www.jeongyookgak.com" target="_blank">정육각</a>
+                <a href="https://www.wowmeat.net" target="_blank">와우미트</a>
+            </li>
+            <li><a href="https://www.10000recipe.com" target="_blank" title="만개의 레시피">레시피</a> /
+                <a href="https://www.llrecipe.com" target="_blank" title="락앤락 레시피">레시피</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=16216017" target="_blank" title="미국 식품의약국">FDA</a> /
+                <a href="https://kr.iherb.com" target="_blank" title="미국 환경보호">EPA</a> / <a
+                    href="https://glycemicindex.com/gi-search" target="_blank" title="GI 당지수 검색">GI</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>식품</h4>
+                <ul class="submenu">
+                    <h4>가공식품</h4>
+                    <li><a href="https://prod.danawa.com/list/?cate=16248736" target="_blank">라면</a>/<a
+                            href="https://prod.danawa.com/list/?cate=16248736" target="_blank">봉지</a>/<a
+                            href="https://prod.danawa.com/list/?cate=16246857" target="_blank">컵</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16237074" target="_blank">즉석밥</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16316230" target="_blank">전투식량</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16341293" target="_blank">카레</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341294" target="_blank">짜장</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341295" target="_blank" title="덮밥소스">덮밥</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1633433" target="_blank">참치</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16228142" target="_blank" title="만두">🥟<!-- 만두 --></a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341335" target="_blank">맛살</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16341332" target="_blank">햄</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341331" target="_blank">소시지</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341334" target="_blank">어묵</a></li>
+                    <li><a href="https://prod.danawa.com/list/?cate=1633181" target="_blank" title="이온 음료">이온</a>/<a
+                            href="https://prod.danawa.com/list/?cate=1633190" target="_blank" title="강장 음료">강장</a>/<a
+                            href="https://prod.danawa.com/list/?cate=16316147&searchOption=searchAttributeValue=193971" target="_blank" title="소화제/병">소화</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1623153" target="_blank">생수</a>/<a
+                            href="http://prod.danawa.com/list/?cate=1623180" target="_blank">탄산</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16240674" target="_blank" title="맥주">🍺<!-- 맥주 --></a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16324554" target="_blank">소주</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16324552" target="_blank" title="와인">🍷<!-- 와인 --></a>/<a
+                            href="http://prod.danawa.com/list/?cate=16331289" target="_blank">탁주</a></li>
+                </ul>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=16322260" target="_blank">식초</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322255" target="_blank">설탕</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322256" target="_blank">소금</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16322259" target="_blank">후추</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322257" target="_blank" title="고춧가루">고춧</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16328270" target="_blank" title="향신료">향</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16322221" target="_blank">고추장</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322222" target="_blank">된장</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322223" target="_blank" title="쌈장">쌈</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16322226" target="_blank">간장</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322227" target="_blank" title="와사비/겨자">겨자</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16343886" target="_blank" title="청국장/낫토">낫토</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16322247" target="_blank" title="케찹/머스타드/소스">케찹</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322250" target="_blank">굴소스</a><a
+                    href="http://prod.danawa.com/list/?cate=16341189" target="_blank">액젓</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16341179" target="_blank">치킨스톡</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16241171" target="_blank">육수</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16222230" target="_blank">식용유</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16222264" target="_blank">밀가루</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=1623162" target="_blank" title="커피">☕<!-- 커피 --></a>/<a
+                    href="http://prod.danawa.com/list/?cate=16321837" target="_blank">녹차</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16242823" target="_blank" title="전통차">전통</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>농/축/수산물</h4>
+                <ul class="submenu">
+                    <h4>축산물</h4>
+                    <li><a href="http://prod.danawa.com/list/?cate=16316092" target="_blank" title="닭">🐔<!-- 닭 --></a>/<a
+                            href="http://prod.danawa.com/list/?cate=16316093" target="_blank">오리</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16316095" target="_blank">달걀</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16216086" target="_blank">소</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16316090" target="_blank">돼지</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16316094" target="_blank">양</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16341491" target="_blank">소불고기</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16341492" target="_blank" title="소갈비">갈비</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16340277" target="_blank">돼지</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16340278" target="_blank">닭갈비</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16341493" target="_blank">닭꼬치/닭발</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16340990" target="_blank" title="간편식">수산</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16340633" target="_blank">축산간편식</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16241464" target="_blank">육포</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16342077" target="_blank">족발</a>/<a
+                            href="http://prod.danawa.com/list/?cate=16342078" target="_blank">편육</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=16231179" target="_blank">밀키트/간편조리</a></li>
+                </ul>
+            <li><a href="https://prod.danawa.com/list/?cate=16247479" target="_blank">쌀</a>/<a
+                    href="https://prod.danawa.com/list/?cate=16216063" target="_blank">잡곡</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322256" target="_blank">소금</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16325265" target="_blank">과일</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16316077" target="_blank">견과</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16316075" target="_blank">채소</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16320870" target="_blank">김치</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16329565" target="_blank">동치미</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16320871" target="_blank" title="백김치">백</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16241160" target="_blank">김장</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16341163" target="_blank">젓갈</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16322256" target="_blank"></a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=1622533" target="_blank">건어물</a>/<a
+                    href="https://prod.danawa.com/list/?cate=16245969" target="_blank">김</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16325157" target="_blank" title="해조류">해조</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16325148" target="_blank">해물</a>/<a
+                    href="https://prod.danawa.com/list/?cate=16347471" target="_blank">생선</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16325149" target="_blank">젓갈</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16341336" target="_blank">유부</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16341337" target="_blank">두부</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16316172" target="_blank">우유</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=16320339" target="_blank" title="치즈">🧀<!-- 치즈 --></a>/<a
+                    href="http://prod.danawa.com/list/?cate=16320337" target="_blank">버터</a>/<a
+                    href="http://prod.danawa.com/list/?cate=16327954" target="_blank" title="생크림/휘핑크림">크림</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>자료실💾</h4>
+                <ul class="submenu">
+                    <h4><a href="http://torrentbob.com" target="_blank">토렌트</a></h4>
+                    <li><a href="https://xn--2j1bu1hdrn87b63tbsb.net" target="_blank">토렌트다이아</a></li>
+                    <li><a href="https://torrentqq316.com" target="_blank">토렌트큐큐</a></li>
+                    <li><a href="https://w14.torrentmovie1.com" target="_blank">토렌트영화</a></li>
+                    <li><a href="http://www.tfreeca22.com/board.php?mode=list&b_id=tent" target="_blank">티프리카</a</li>
+                    <!---음악-->
+                        <li><a href="https://torrenttop96.com" target="_blank">토렌트탑</a></li>
+                    <li><a href="https://torrentsee217.com" target="_blank">토렌트씨</a></li>
+                    <li><a href="https://torrentsome138.com" target="_blank">토렌트썸</a></li>
+                    <li><a href="https://torrenttip119.com" target="_blank">토렌트팁</a></li>
+                    <li><a href="https://torrentbot135.com" target="_blank">토렌트봇</a></li>
+                    <li><a href="http://club.pdpop.com/pdpop" target="_blank">토렌트파이</a></li>
+                    <li><a href="http://club.pdpop.com/pdpop" target="_blank">천사클럽</a></li>
+                </ul>
+            </li>
+            <li><a href="http://p2ptop10.com" target="_blank" title="웹하드 순위">웹하드</a> /
+                <a href="http://cineaste.co.kr" target="_blank">자막</a>
+            </li>
+            <li><a href="https://thepiratebay.org" target="_blank">ThePirateBay</a></li>
+            <li><a href="https://torrentz2.nz" target="_blank">Torrentz2</a></li>
+            <li><a href="https://www.limetorrents.lol" target="_blank">limetorrents</a></li>
+            <li><a href="https://kickasstorrents.to" target="_blank">Kickass</a> /
+                <a href="https://1337x.to" target="_blank">1337X</a>
+            </li>
+            <li><a href="https://www.torrentdownloads.pro" target="_blank">Torrentdownload</a></li>
+            <li><a href="https://yts.lt" target="_blank">YTSam</a> /
+                <a href="https://www.torlock.com" target="_blank">torlock</a>
+            </li>
+            <li><a href="https://zooqle.co.in" target="_blank">zooqle</a> /
+                <a href="https://rarbgprx.org/torrents.php" target="_blank">RARBG</a>
+            </li>
+            <!--<li><a href="https://rarbgprx.org/torrents.php?category=2;18;41;49" target="_blank">TV</a>
+                <a href="https://bit.ly/3pTLiye" target="_blank" title="RARBG 1080p 이상 설정">무비</a></li>-->
+        </section>
+        <section>
+            <li class="tab">
+                <h4>병원 💊</h4>
+                <ul class="submenu">
+                    <h4><a href="http://www.health.kr" target="_blank" title="의약품 정보 검색">약학정보</a>
+                        <a href="https://nedrug.mfds.go.kr" target="_blank" title="의약품 안전나라">의약품</a>
+                    </h4>
+                    <li><a href="https://bit.ly/3GtkE3S" target="_blank" title="서울대학병원">신체기관</a> /
+                        <a href="https://tv.naver.com/snuh" target="_blank" title="서울대학병원 신체기관">영상</a>
+                    </li>
+                    <li><a href="https://bit.ly/3vx0swc" target="_blank" title="조건별 찾기 - 건강보험심사평가원">병원/약국</a>
+                        <a href="https://bit.ly/3pwipHd" target="_blank" title="병원/약국 지도 찾기">지도</a>
+                    </li>
+                    <li><a href="https://bit.ly/3KaIeok" target="_blank" title="병원 평가 - 건강보험심사평가원">병원평가</a>
+                        <a href="https://bit.ly/3tn4PXV" target="_blank" title="병원 비급여 정보">진료비</a>
+                    </li>
+                    <li><a href="http://ch.cauhs.or.kr" target="_blank">중앙대병원</a>
+                        <a href="http://ch.cauhs.or.kr" target="_blank" title="중앙대병원 광명점">광명</a>
+                    </li>
+                    <li><a href="https://seoul.hyumc.com" target="_blank">한양대학교병원</a></li>
+                    <li><a class="bold" href="https://www.hanilmed.net" target="_blank" title="한일병원 서울">한일</a> /
+                        <a href="http://www.daehanh.com" target="_blank">대한병원</a>
+                    </li>
+                    <li><a href="http://www.paik.ac.kr/seoul" target="_blank" title="을지로">백병원</a>/<a
+                            href="http://www.paik.ac.kr/sanggye" target="_blank" title="백병원(상계)">상계</a></li>
+                    <li><a href="https://bit.ly/3KaHmQo" target="_blank" title="강북점">힘찬병원</a>
+                        <a href="http://doubleuclinic.net/" target="_blank" title="내과/유방/갑상선/대장검사">W의원</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="bold" href="https://www.snuh.org/main.do" target="_blank" title="서울대학병원">서울</a>·<a
+                    class="bold" href="https://www.brmh.org" target="_blank" title="보라매병원 서울대학병원 운영 종합병원">보라매</a>·<a
+                    class="bold" href="https://www.brmh.org" target="_blank" title="분당 서울대학병원">분당</a></li>
+            <li><a href="http://anam.kumc.or.kr" target="_blank" title="고대안암병원">고대안암</a>/<a
+                    href="http://guro.kumc.or.kr" target="_blank" title="고대구로병원">구로</a></li>
+            <li><a href="http://www.khuh.or.kr" target="_blank">경희대학</a>/<a href="http://www.khuoh.or.kr"
+                    target="_blank" title="경희대한방병원">한방</a></li>
+            <li><a href="https://www.kbsmc.co.kr" target="_blank" title="삼성강북병원 서대문">삼성강북</a>/<a
+                    href="http://www.samsunghospital.com" target="_blank" title="삼성서울병원 강남구 일원역">서울</a></li>
+            <li><a href="https://www.kuh.ac.kr" target="_blank">건국대학병원</a></li>
+            <li><a class="bold" href="http://sev.iseverance.com" target="_blank" title="세브란스신촌 신체별 증상">세브란스</a>
+                <a href="http://gs.iseverance.com" target="_blank" title="세브란스강남">강남</a>
+            </li>
+            <li><a class="bold" href="https://www.cmcseoul.or.kr" target="_blank">성모서울병원</a></li>
+            <li><a class="bold" href="http://www.amc.seoul.kr" target="_blank" title="신체별 증상">아산서울병원</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>PC쇼핑/모바일</h4>
+                <ul class="submenu">
+                    <h4><a href="http://prod.danawa.com/list/?cate=11216929" target="_blank" title="표준PC부품">PC부품💻</a>
+                    </h4>
+                    <li><a href="http://prod.danawa.com/list/?cate=112756" target="_blank">데스크탑</a> /
+                        <a href="http://prod.danawa.com/list/?cate=112758" target="_blank">랩탑</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=12210596" target="_blank">태블릿PC</a>
+                        <a href="https://prod.danawa.com/list/?cate=112799" target="_blank"
+                            title="케이블/젠더 - PC주변기기">케이</a><a href="https://prod.danawa.com/list/?cate=12237426"
+                            target="_blank" title="케이블 - 모바일">블</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=112789" target="_blank">NAS</a> /
+                        <a href="http://prod.danawa.com/list/?cate=112772" target="_blank">ODD</a>
+                        <a href="http://prod.danawa.com/list/?cate=11230146" target="_blank" title="외장케이스">외장</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=112791" target="_blank">USB</a>/<a
+                            href="http://prod.danawa.com/list/?cate=112793" target="_blank">메모리카드</a></li>
+                    <li><a href="http://prod.danawa.com/list/?cate=12215709" target="_blank">폰</a> /
+                        <a href="http://prod.danawa.com/list/?cate=12237422" target="_blank">액세서리</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=12244076" target="_blank" title="이어폰 유선">이어</a><a href="http://prod.danawa.com/list/?cate=12237349" target="_blank" title="이어폰 무선">폰</a> /
+                        <a href="http://prod.danawa.com/list/?cate=12248116" target="_blank" title="헤드폰 유선">헤드</a><a href="http://prod.danawa.com/list/?cate=12237350" target="_blank" title="헤드폰 무선">폰</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=10222639" target="_blank" title="스피커">스</a><a href="http://prod.danawa.com/list/?cate=10328127" target="_blank" title="북셸프">피</a><a href="http://prod.danawa.com/list/?cate=10328122" target="_blank" title="센터/서브우퍼">커</a>
+                        <a href="http://prod.danawa.com/list/?cate=10324963" target="_blank" title="DAC">DAC</a>/<a href="http://prod.danawa.com/list/?cate=1022809" target="_blank" title="DAC/앰프">앰프</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=1024257" target="_blank" title="사운드바">사운드</a>
+                        <a href="http://prod.danawa.com/list/?cate=10252676" target="_blank" title="AV리시버">AV리시버</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=12215657" target="_blank">워치</a> /
+                        <a href="http://prod.danawa.com/list/?cate=12218137" target="_blank">VR</a>/<a href="http://prod.danawa.com/list/?cate=12351491" target="_blank">AR</a>
+                    </li>
+                    <li><a href="http://prod.danawa.com/list/?cate=12237506" target="_blank" title="DSLR">카</a><a href="http://prod.danawa.com/list/?cate=12237505" target="_blank" title="미러리스">메</a><a href="http://prod.danawa.com/list/?cate=12237508" target="_blank" title="액션캠/캠코더">라</a>
+                        <a href="http://prod.danawa.com/list/?cate=12237500" target="_blank" title="렌즈"> / </a><a href="http://prod.danawa.com/list/?cate=12237569" target="_blank">용품</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=112747" target="_blank">CPU</a> /
+                <a href="http://prod.danawa.com/list/?cate=112752" target="_blank">RAM</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=112753" target="_blank">VGA</a> /
+                <a href="http://prod.danawa.com/list/?cate=112751" target="_blank">M/B</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=112760" target="_blank">SSD</a>
+                <a href="https://prod.danawa.com/list/?cate=112760&searchOption=/searchAttributeValue=202347" target="_blank" title="M.2 NVMe (2280)">M.2</a>
+                <a href="http://prod.danawa.com/list/?cate=112763" target="_blank">HDD💾</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=112775" target="_blank">케이스</a> /
+                <a href="http://prod.danawa.com/list/?cate=112777" target="_blank">파워</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=11236855" target="_blank">쿨러/튜닝</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=112782" target="_blank">키보드</a>/
+                <a href="http://prod.danawa.com/list/?cate=112787" target="_blank">마우스</a>
+            </li>
+            <li><a href="http://prod.danawa.com/list/?cate=11253488" target="_blank" title="컨트롤러 버튼">버튼</a>
+                <a href="http://prod.danawa.com/list/?cate=11239702" target="_blank">주변기기</a></li>
+            <li><a href="http://prod.danawa.com/list/?cate=112757" target="_blank">모니터</a>/
+                <a href="http://prod.danawa.com/list/?cate=112994" target="_blank">프린터</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>잡스</h4>
+                <ul class="submenu">
+                    <h4>잡스2</h4>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                </ul>
+            </li>
+            <li><a href="" target="_blank">업로드</a></li>
+            <li><a href="http://www.hello-dm.kr/auto/go.php?gid=stcold" target="_blank"></a></li>
+            <li><a href="http://www.hello-dm.kr/community/?smenu=chat&menu=community01" target="_blank"></a></li>
+            <li><a href="http://www.hello-dm.kr/community/attendance_check.html" target="_blank"></a></li>
+            <li><a href="http://www.hello-dm.kr/membership/?menu=mission" target="_blank"></a></li>
+            <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_1" target="_blank"></a></li>
+            <li><a href="http://www.hello-dm.kr/message" target="_blank"></a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>자주방문</h4>
+                <ul class="submenu">
+                    <h4>자주방문2</h4>
+                    <li><a href="https://bit.ly/2CWZ1ya" target="_blank">주부아빠</a></li>
+                    <li><a href="https://pomnyun.tistory.com/" target="_blank" title="즉문즉설">법륜스님</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.oppadu.com" target="_blank" title="오빠두엑셀 사이트">오빠두</a><a href="https://www.youtube.com/@Oppadu" target="_blank" title="오빠두엑셀 유튜브">엑셀</a></li>
+            <li><a href="http://www.youtube.com/@sirealco" target="_blank" title="노션">시리얼</a>
+                <a href="https://litt.ly/notionactually" target="_blank" title="노션다움 자체">노션</a><a href="http://www.youtube.com/@notionactually" target="_blank" title="노션다움 유튜브">다움</a></li>
+            <li><a href="https://bit.ly/337es1k" target="_blank">UNDERKg</a></li>
+            <li><a href="https://bit.ly/3hXw2JB" target="_blank">가전주부</a>
+                <a href="https://www.youtube.com/@zuyoni1" target="_blank">주연</a></li>
+            <li><a href="https://bit.ly/3f8NPvp" target="_blank">방구석리뷰룸</a></li>
+            <li><a href="https://bit.ly/330wAtT" target="_blank">ITSub</a>
+                <a href="https://bit.ly/3hPxWvp" target="_blank">이퓨</a></li>
+            <li><a href="https://bit.ly/3jNFwso" target="_blank" title="여미TV">여미</a>·<a href="https://bit.ly/3gfEEuE" target="_blank">레드미라쥬</a></li>
+            <li></li>
+            <li></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>크롬<!--<img src="https://www.google.com/chrome/favicon.ico"  class="fav">--></h4>
+                <ul class="submenu">
+                    <h4>구글</h4>
+                    <li><a href="https://earth.google.com" target="_blank">지구</a></li>
+                    <li><a href="https://www.google.com/travel" target="_blank">여행</a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                </ul>
+            </li>
+            <li><a href="https://play.google.com/store/apps" target="_blank" title="Play 스토어">구글</a>/<a
+                    href="https://fnd.io" target="_blank" title="앱스토">애플스토어</a></li>
+            <li><a href="https://chrome.google.com/webstore/category/extensions?hl=ko" target="_blank">웹스토어</a></li>
+            <li><a href="chrome://extensions" target="_blank">확장앱</a></li>
+            <li><a href="chrome://whats-new" target="_blank">크롬 새 기능</a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>디자인</h4>
+                <ul class="submenu">
+                    <h4>색상</h4>
+                    <li><a href="https://colorhunt.co" target="_blank">Color Hunt</a></li>
+                    <li><a href="https://color.adobe.com" target="_blank" title="Adobe Color">어도비</a></li>
+                    <li><a href="https://jxnblk.github.io/hello-color" target="_blank">Hello Color</a></li>
+                    <li><a href="https://www.colordrop.io/" target="_blank">Color Drop</a></li>
+                    <li><a href="http://web.kats.go.kr/KoreaColor/color.asp" target="_blank">색이름검색</a></li>
+                    <li><a href="http://www.workwithcolor.com/hsl-color-picker-01.htm" target="_blank"
+                            title="HSL 선택기">HSL</a> /
+                        <a href="http://www.workwithcolor.com/hsl-color-schemer-01.htm" target="_blank"
+                            title="HSL Schemer">HSL</a>
+                    </li>
+                    <li><a href="http://www.workwithcolor.com/mm-color-blender-01.htm" target="_blank">Multi Color</a>
+                    </li>
+                    <li><a href="http://www.workwithcolor.com/color-converter-01.htm" target="_blank">Color 컨버터</a></li>
+                    <li><a href="https://www.webfx.com/web-design/color-picker" target="_blank">WebFXColor</a></li>
+                </ul>
+            </li>
+            <li><a href="https://play.google.com/store/apps" target="_blank" title="Play 스토어"></a>
+                <a href="https://fnd.io" target="_blank" title="앱스토"></a>
+            </li>
+            <li><a href="https://chrome.google.com/webstore/category/extensions?hl=ko" target="_blank"></a></li>
+            <li><a href="chrome://extensions" target="_blank"></a></li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>투잡</h4>
+                <ul class="submenu">
+                    <h4><a href="https://bit.ly/2DYXoNC" target="_blank" title="부동산 사이트">부동산</a></h4>
+                    <li><a href="https://www.applyhome.co.kr" target="_blank">청약홈</a></li>
+                    <li><a href="https://kbland.kr" target="_blank">KB부동산</a></li>
+                    <li><a href="https://color.adobe.com" target="_blank" title="Adobe Color"></a></li>
+                    <li><a href="https://www.palettable.io" target="_blank"></a></li>
+                    <li><a href="https://jxnblk.github.io/hello-color" target="_blank"></a></li>
+                    <li><a href="https://www.colordrop.io/" target="_blank"></a></li>
+                    <li><a href="http://web.kats.go.kr/KoreaColor/color.asp" target="_blank"></a></li>
+                    <li><a href="http://www.workwithcolor.com/hsl-color-picker-01.htm" target="_blank"
+                            title="HSL 선택기"></a>
+                        <a href="http://www.workwithcolor.com/hsl-color-schemer-01.htm" target="_blank"
+                            title="HSL Schemer"></a>
+                    </li>
+                    <li><a href="http://www.workwithcolor.com/mm-color-blender-01.htm" target="_blank"></a></li>
+                    <li><a href="http://www.workwithcolor.com/color-converter-01.htm" target="_blank"></a></li>
+                    <li><a href="https://www.webfx.com/web-design/color-picker" target="_blank"></a></li>
+                </ul>
+            </li>
+            <li><a href="https://consensus.hankyung.com/analysis/list?skinType=industry" target="_blank"
+                    title="한경컨센서스 > 산업">한경</a>
+                <a href="https://finance.naver.com/research/industry_list.naver" target="_blank"
+                    title="네이버 금융 > 산업">네이버</a>
+            </li>
+            <li><a href="https://keri.koreaexim.go.kr/HPHFOE046M01#none" target="_blank" title="산업">한국수출입은행</a></li>
+            <li><a href="https://www.kdi.re.kr/research/topicList?cd=G" target="_blank"
+                    title="KDI한국개발연구원 > 산업">KDI한국개발연구</a></li>
+            <li><a href="https://www.itfind.or.kr/report/analysis/list.do" target="_blank" title="산업면">ITFIND</a></li>
+            <li><a href="https://kpmg.com/kr/ko/home/insights/2023/01/samjong-insight.html" target="_blank"
+                    title="삼정KPMG Insight > 산업">Insight</a>
+                <a href="https://kpmg.com/kr/ko/home/insights/2023/01/issue-monitor.html" target="_blank"
+                    title="삼정KPMG > Issue Monitor 산업">이슈</a>
+            </li>
+            <li><a href="https://bit.ly/44JUvtY" target="_blank" title="CMA - 네이버">CM</a><a
+                    href="https://new-m.pay.naver.com/savings/list/cma" target="_blank" title="CMA (풀) - 네이버">A</a>
+                <a href="https://bit.ly/44F49yb" target="_blank" title="예금 - 네이버">예</a><a
+                    href="https://new-m.pay.naver.com/savings/list/deposit" target="_blank" title="예금 (풀) - 네이버">금</a><a
+                    href="https://misaving.mibank.me/deposit" target="_blank" title="정기예금 - 마이뱅크">·</a>
+                <a href="https://bit.ly/3pJcqCp" target="_blank" title="적금 - 네이버">적</a><a
+                    href="https://new-m.pay.naver.com/savings/list/saving" target="_blank" title="적금 (풀) - 네이버">금</a><a
+                    href="https://misaving.mibank.me/saving" target="_blank" title="정기적금 - 마이뱅크">·</a><a
+                    href="https://misaving.mibank.me/saving" target="_blank" title="자유 적금 - 마이뱅크">·</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>주방</h4>
+                <ul class="submenu">
+                    <h4><a href="https://prod.danawa.com/list/?cate=17235635" target="_blank" title="">식기/컵/보관용기</a></h4>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327809" target="_blank" title="보온보냉/텀블러">텀블러</a></li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17311033" target="_blank" title="물컵/주스컵">물</a><a href="https://prod.danawa.com/list/?cate=17232429" target="_blank" title="컵/머그/잔">컵</a>
+                        <a href="https://prod.danawa.com/list/?cate=17311032" target="_blank" title="머그컵">머그</a>
+                        <a href="https://prod.danawa.com/list/?cate=17311031" target="_blank" title="커피/찻잔">찻잔</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17337151" target="_blank" title="">맥주잔</a>
+                        <a href="https://prod.danawa.com/list/?cate=17337152" target="_blank" title="소주잔/막걸리잔">막걸리잔</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17311332" target="_blank" title="와인잔/샴페인잔">와인잔</a>
+                        <a href="https://prod.danawa.com/list/?cate=17347740" target="_blank" title="컵뚜껑/잔받침">잔받침</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17232433" target="_blank" title="보관/밀폐용기">용기</a>
+                        <a href="https://prod.danawa.com/list/?cate=17332181" target="_blank" title="유리용기">유리</a>
+                        <a href="https://prod.danawa.com/list/?cate=17332178" target="_blank" title="플라스틱용기">PLA</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17332179" target="_blank" title="스테인리스용기">스텐</a>
+                        <a href="https://prod.danawa.com/list/?cate=17347738" target="_blank" title="냉동밥/레인지용기">렌지</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327811" target="_blank" title="양념통/오일병">양념통</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327812" target="_blank" title="도시락통">도시락</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327807" target="_blank" title="김치통">김치통</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327808" target="_blank" title="과실청/담금주병">발효</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327787" target="_blank" title="냉장고정리용기">냉장고</a>
+                        <a href="https://prod.danawa.com/list/?cate=17348893" target="_blank" title="">밧드</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17232435" target="_blank" title="물병/주전자">물병</a>
+                        <a href="https://prod.danawa.com/list/?cate=17325131" target="_blank" title="">주전자</a>
+                        <a href="https://prod.danawa.com/list/?cate=17333947" target="_blank" title="티포트/티포트세트">티</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17248885" target="_blank" title="쌀통/잡곡통">쌀통</a>
+                        <a href="https://prod.danawa.com/list/?cate=17349635" target="_blank" title="">잡곡통</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17232419" target="_blank" title="그릇세트">셋</a>·<a href="https://prod.danawa.com/list/?cate=17232419" target="_blank" title="그릇/식기">식</a><a href="https://prod.danawa.com/list/?cate=17342044" target="_blank" title="식판">판</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334074" target="_blank" title="나눔접시">나눔</a><a href="https://prod.danawa.com/list/?cate=17334071" target="_blank" title="">접시</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17328764" target="_blank" title="">면기</a>·<a href="https://prod.danawa.com/list/?cate=17324863" target="_blank" title="">공기</a>·<a href="https://prod.danawa.com/list/?cate=17324864" target="_blank" title="">대접</a>·<a href="https://prod.danawa.com/list/?cate=17324868" target="_blank" title="">볼</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327812" target="_blank" title="디저트볼">디저트볼</a>
+                        <a href="https://prod.danawa.com/list/?cate=17328765" target="_blank" title="찬기/종지">찬기</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17232425" target="_blank" title="수저/커트러리">🍽</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334136" target="_blank" title="한식수저세트">🥢</a><a href="https://prod.danawa.com/list/?cate=17334137" target="_blank" title="양식커트러리세트">🍴</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334138" target="_blank" title="티스푼+티포크세트">티</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17336430" target="_blank" title="숟가락/젓가락">수저</a><a href="https://prod.danawa.com/list/?cate=17327807" target="_blank" title="포크/나이프">🍴</a><a href="https://prod.danawa.com/list/?cate=17334139" target="_blank" title="티스푼/티포크">티</a>·<a href="https://prod.danawa.com/list/?cate=17334833" target="_blank" title="디저트나이프">디저트</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327964" target="_blank" title="서빙스푼/서버">서빙</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334135" target="_blank" title="수저통">수저</a><a href="https://prod.danawa.com/list/?cate=17327967" target="_blank" title="수저받침">받침</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17215961" target="_blank"
+                    title="프라이팬/궁중팬">프라이팬</a>
+                <a href="https://prod.danawa.com/list/?cate=17315964" target="_blank"
+                    title="네이버 금융 > 산업">궁중팬</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=1723806" target="_blank" title="냄비/곰솥">냄비</a>
+                <a href="https://prod.danawa.com/list/?cate=1734004" target="_blank"
+                title="">곰솥</a>
+                <a href="https://prod.danawa.com/list/?cate=1734004" target="_blank"
+                title="압력솥/뚝배기">압력솥</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=1723816" target="_blank" title="칼/칼갈이/칼꽂이">🔪</a>·<a href="https://prod.danawa.com/list/?cate=1734512" target="_blank" title="중식도">중식</a>·<a href="https://prod.danawa.com/list/?cate=1739036" target="_blank" title="">과도</a>·<a href="https://prod.danawa.com/list/?cate=1739045" target="_blank" title="빵칼">빵</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17340096" target="_blank" title="칼갈이">갈이</a>
+                <a href="https://prod.danawa.com/list/?cate=17348186" target="_blank" title="">숫돌</a>
+                <a href="https://prod.danawa.com/list/?cate=17340097" target="_blank" title="칼꽂이">꽂이</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=1723813" target="_blank"
+                    title="">도마</a>
+                <a href="https://prod.danawa.com/list/?cate=17333968" target="_blank"
+                    title="도마꽂이">꽂이</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=1723812" target="_blank" title="가위/채칼/다지기">가위</a>
+                <a href="https://prod.danawa.com/list/?cate=17310935" target="_blank" title="채칼/슬라이서">채</a><a href="https://prod.danawa.com/list/?cate=17334043" target="_blank" title="감자칼/필러">칼</a>
+                <a href="https://prod.danawa.com/list/?cate=17334797" target="_blank" title="그라인더">갈이</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=1723809" target="_blank" title="조리도구">조리</a>
+                <a href="https://prod.danawa.com/list/?cate=1738129" target="_blank" title="국자/뒤집개/주걱">국자</a>
+                <a href="https://prod.danawa.com/list/?cate=17334009" target="_blank" title="집게/튀김젓가락">집게</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17341471" target="_blank" title="믹싱볼/대야">볼</a>
+                <a href="https://prod.danawa.com/list/?cate=17341469" target="_blank" title="야채탈수기">탈수기</a>
+                <a href="https://prod.danawa.com/list/?cate=17341467" target="_blank" title="채반/건지기">채반</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17347739" target="_blank" title="">찜기</a>
+                <a href="https://prod.danawa.com/list/?cate=17341472" target="_blank" title="계량컵/스푼">계량</a>
+                <a href="https://prod.danawa.com/list/?cate=17311502&searchOption=/searchAttributeValue=194266" target="_blank" title="조리용솔">솔</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17311502&searchOption=/searchAttributeValue=343462" target="_blank" title="">달걀틀</a>
+                <a href="https://prod.danawa.com/list/?cate=17311502&searchOption=/searchAttributeValue=858841" target="_blank" title="아이스크림 스쿱">스쿱</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>주방잡화</h4>
+                <ul class="submenu">
+                    <h4><a href="https://bit.ly/2DYXoNC" target="_blank" title="부동산 사이트">주방소품</a></h4>
+                    <li><a href="https://prod.danawa.com/list/?cate=17227801" target="_blank" title="싱크대수전/싱크볼">싱크</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327802" target="_blank" title="싱크대수전">수전</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334618" target="_blank" title="싱크헤드">헤드</a><a href="https://prod.danawa.com/list/?cate=17327803" target="_blank" title="싱크볼">볼</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334621" target="_blank" title="절수페달">절수</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327805" target="_blank" title="싱크대거름망">거름망</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327804" target="_blank" title="싱크대마개">마개</a>
+                    </li><!-- 고무장갑/수세미 -->
+                    <li><a href="https://prod.danawa.com/list/?cate=17327842" target="_blank" title="고무장갑">장갑</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327843" target="_blank" title="">수세미</a>
+                        <a href="https://prod.danawa.com/list/?cate=17333219" target="_blank" title="주방솔/병솔">솔</a>
+                        <a href="https://prod.danawa.com/list/?cate=17333151" target="_blank" title="">행주</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327847&searchOption=/searchAttributeValue=799219" target="_blank" title="주방세제통">세제</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17327845" target="_blank" title="가스차단기">차단기</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327846" target="_blank" title="앞치마/조리복">앞치마</a>
+                        <a href="https://prod.danawa.com/list/?cate=17333152" target="_blank" title="물막이/렌지가드">막</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17340191" target="_blank" title="테이블보/매트">매트</a>
+                        <a href="https://prod.danawa.com/list/?cate=17334775" target="_blank" title="김장매트">김장</a>
+                        <a href="https://prod.danawa.com/list/?cate=17327847&searchOption=/searchAttributeValue=799213" target="_blank" title="야채보관망">망</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17345591" target="_blank" title="덮개/받침">받침</a>
+                        <a href="https://prod.danawa.com/list/?cate=17353761" target="_blank" title="얼음/아이스크림틀">얼음</a>
+                        <a href="https://prod.danawa.com/list/?cate=17345590" target="_blank" title="오프너/병따개">오프너</a>
+                    </li>
+                    <li><a href="https://prod.danawa.com/list/?cate=17345589" target="_blank" title="주방타이머">타이머</a>
+                        <a href="https://prod.danawa.com/list/?cate=17354353" target="_blank" title="">저울</a>
+                        <a href="https://prod.danawa.com/list/?cate=17345592" target="_blank" title="온도계">온도</a>
+                    </li>
+                </ul>
+            </li><!-- 주방잡화/일회용품 > 지퍼백/비닐봉투 -->
+            <li><a href="https://prod.danawa.com/list/?cate=17245981" target="_blank" title="">위생장갑</a>
+                <a href="https://prod.danawa.com/list/?cate=17327863" target="_blank" title="">지퍼백</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17334409" target="_blank" title="쓰레기봉투">쓰레기</a>
+                <a href="https://prod.danawa.com/list/?cate=17336160" target="_blank" title="">롤백</a>
+                <a href="https://prod.danawa.com/list/?cate=17345968" target="_blank" title="위생백">위생</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17327862" target="_blank" title="비닐봉투">비닐</a>
+                <a href="https://prod.danawa.com/list/?cate=17334750" target="_blank" title="김장봉투">김장</a>
+                <a href="https://prod.danawa.com/list/?cate=17234408" target="_blank" title="랩/호일">랩</a>
+            </li>
+            <li><!-- 주방수납용품 -->
+                <a href="https://prod.danawa.com/list/?cate=17242990" target="_blank" title="식기건조대/선반">건조</a>
+                <a href="https://prod.danawa.com/list/?cate=17335154" target="_blank" title="바스켓/정리랙">정리</a>
+                <a href="https://prod.danawa.com/list/?cate=17335156" target="_blank" title="프라이팬정리대">팬</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17335158" target="_blank" title="키친타올홀더">타올</a>
+                <a href="https://prod.danawa.com/list/?cate=17345988" target="_blank" title="행주걸이">행주</a>
+                <a href="https://prod.danawa.com/list/?cate=17345990" target="_blank" title="컵걸이">컵</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17335157" target="_blank" title="접시정리대">접시</a>
+                <a href="https://prod.danawa.com/list/?cate=17345989" target="_blank" title="수세미선반/받침">수세미</a>
+                <a href="https://prod.danawa.com/list/?cate=17335163" target="_blank" title="수저통/정리함">수저</a>
+            </li>
+            <li><a href="https://prod.danawa.com/list/?cate=17339701" target="_blank" title="조리도구걸이">조리</a>
+                <a href="https://prod.danawa.com/list/?cate=17335169" target="_blank" title="칼/도마꽂이">꽂이</a>
+                <a href="https://prod.danawa.com/list/?cate=17335162&searchOption=/searchAttributeValue=799075" target="_blank" title="차,커피박스">차</a>
+            </li>
+        </section>
+        <section>
+            <li class="tab">
+                <h4>부업</h4>
+                <ul class="submenu">
+                    <h4>부업2</h4>
+                    <li><a href="http://www.hello-dm.kr/mypage/?menu=mypage" target="_blank">실적확인출금</a></li>
+                    <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_3" target="_blank">홍보수익보기</a></li>
+                    <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_8" target="_blank">홍보수익출금</a></li>
+                    <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_7" target="_blank">MY코드목록</a></li>
+                    <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_2" target="_blank">CPA</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.hello-dm.kr" target="_blank">헬드</a></li>
+            <li><a href="http://www.hello-dm.kr/auto/go.php?gid=stcold" target="_blank">드림오토 시작</a></li>
+            <li><a href="http://www.hello-dm.kr/community/?smenu=chat&menu=community01" target="_blank">출석확인</a></li>
+            <li><a href="http://www.hello-dm.kr/community/attendance_check.html" target="_blank">출첵</a></li>
+            <li><a href="http://www.hello-dm.kr/membership/?menu=mission" target="_blank">미션수익</a></li>
+            <li><a href="http://www.hello-dm.kr/marketing/?menu=marketing_1" target="_blank">광고업체포스팅</a></li>
+            <li><a href="http://www.hello-dm.kr/message" target="_blank">쪽지알림</a></li>
+        </section>
+    </main>
+    <footer>ⓒ 2022. bookmark. bychoi8249. All Rights Reserved.</footer>
+    <div class="toggle-container">
+        <!-- 1번째 토글 -->
+        <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>01 오늘의 역사 — 위키백과</h3><li><a href="https://ko.wikipedia.org/wiki/위키백과:오늘의_역사" target="_blank" title="위키피디아 오늘의 역사">역사</a>·<a
+                href="https://newslibrary.naver.com/search/searchByDate.naver" target="_blank"
+                title="역사 | 오늘의 뉴스 - 네이버">뉴스</a>·<a href="https://www.ehistory.go.kr/theme/remember_mon" target="_blank"
+                title="역사 | 오늘의 사건 - 영상역사관">사건</a></li>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://ko.wikipedia.org/wiki/위키백과:오늘의_역사" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 1 / 1;"></iframe>
+                <a href="https://ko.wikipedia.org/wiki/위키백과:오늘의_역사" target="_blank" title="위키피디아 오늘의 역사">역사</a>·<a
+                href="https://newslibrary.naver.com/search/searchByDate.naver" target="_blank"
+                title="역사 | 오늘의 뉴스 - 네이버">뉴스</a>·<a href="https://www.ehistory.go.kr/theme/remember_mon" target="_blank"
+                title="역사 | 오늘의 사건 - 영상역사관">사건</a>
+            </div>
+        </div>
+    
+        <!-- 2번째 토글 300MB-->
+        <!-- <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>02 날씨</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://search.zum.com/search.zum?method=uni&option=accu&qm=f_typing&rd=1&query=날씨" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 4 / 3;"></iframe>
+            </div>
+        </div> -->
+    
+        <!-- 3번째 토글 -->
+        <!-- <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>03 사전</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://dict.naver.com" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 1 / 1;"></iframe>
+            </div>
+        </div> -->
+    
+        <!-- 4번째 토글 -->
+        <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>04 맞춤법·문법 검사기</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://nara-speller.co.kr/speller" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 1 / 1;"></iframe>
+            </div>
+        </div>
+
+        <!-- 8번째 토글 50MB-->
+        <!-- <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>08 축제 달력</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://korean.visitkorea.or.kr/kfes/list/festivalCalendar.do" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 1 / 1;"></iframe>
+            </div>
+        </div> -->
+    
+        <!-- 9번째 토글 50MB-->
+        <!-- <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>09 축제/행사 달력</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://korean.visitkorea.or.kr/list/travelinfo.do?service=show" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 4 / 3;"></iframe>
+            </div>
+        </div> -->
+    
+        <!-- 10번째 토글 -->
+        <div class="toggle-section">
+            <div class="toggle-header">
+                <h3>10 지도</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="toggle-content">
+                <iframe src="https://map.naver.com" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%; aspect-ratio: 4 / 3;"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleHeaders = document.querySelectorAll('.toggle-header');
+    
+            toggleHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const toggleSection = header.closest('.toggle-section');
+                    const content = toggleSection.querySelector('.toggle-content');
+                    const icon = toggleSection.querySelector('.toggle-icon');
+    
+                    content.classList.toggle('active');
+                    icon.classList.toggle('rotated');
+                });
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
