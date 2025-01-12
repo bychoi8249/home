@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(6)도서 동시 검색</title>
+    <link rel="stylesheet" href="css/Multi_Search.css">
+</head>
+<body>
+    <div id="controls">
+        <input id="searchBar" type="text" placeholder="도서 검색" />
+        <button id="searchButton">🔍</button>
+        <button id="resetSearchButton">❎</button>
+    </div>
+
+    <div id="iframeContainer">
+        <!-- iframe이 동적으로 추가됩니다 -->
+    </div>
+
+    <script>
+        // 초기 사이트 목록 (지도)
+        let sites_map = [
+            // 서점
+            "https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=All&SearchWord=",
+            "https://www.aladin.co.kr/m/msearch.aspx?SearchWord=",
+            "https://www.yes24.com/Product/Search?query=",
+            "https://search.kyobobook.co.kr/search?keyword=",
+            // 도서관
+                // 동네
+            "https://www.unilib.dobong.kr/site/search/search00.do?cmd_name=bookandnonbooksearch&search_type=detail&manage_code=MA%2CMB%2CMC%2CMG%2CMJ%2CMF%2CSB%2CSL%2CSM%2CSN%2CSO%2CSP%2CSJ%2CSQ%2CSS%2CST%2CSU&search_item_add=&search_txt_add=&use_facet=N&org_detail=&facet_manage_code=&facet_author=&facet_publisher=&facet_pub_year=&facet_subject_code=&facet_media_code=&search_item=&sh_orderby=PUB_YEAR%3BDESC&search_txt=",
+                // 전체
+            "https://www.unilib.dobong.kr/site/search/search00.do?cmd_name=bookandnonbooksearch&search_type=detail&manage_code=MA%2CMB%2CMC%2CME%2CMG%2CMJ%2CMF%2CMH%2CSA%2CMD%2CSB%2CSL%2CSM%2CSN%2CSO%2CSP%2CSJ%2CSK%2CSQ%2CSS%2CST%2CSU%2CSG%2CSH%2CSC&search_item_add=&search_txt_add=&use_facet=N&org_detail=&facet_manage_code=&facet_author=&facet_publisher=&facet_pub_year=&facet_subject_code=&facet_media_code=&search_item=&sh_orderby=PUB_YEAR%3BDESC&search_txt=",
+        ];
+
+        const iframeContainer = document.getElementById('iframeContainer');
+        const searchBar = document.getElementById('searchBar');
+        const searchButton = document.getElementById('searchButton');
+        const resetSearchButton = document.getElementById('resetSearchButton');
+
+        // 첫 실행 시 검색창에 커서 자동 위치
+        window.addEventListener('DOMContentLoaded', () => {
+                    searchBar.focus(); // 검색창에 커서 위치
+        });
+
+        // 검색 실행 함수
+        const performSearch = () => {
+            const query = searchBar.value.trim();
+            if (!query) return;
+
+            iframeContainer.innerHTML = ''; // 기존 iframe 제거
+
+            sites_map.forEach(site => {
+                const iframe = document.createElement('iframe');
+                iframe.src = site + encodeURIComponent(query);
+                iframeContainer.appendChild(iframe);
+            });
+        };
+
+        // 검색 초기화 버튼 클릭 시
+        resetSearchButton.addEventListener('click', () => {
+            searchBar.value = ''; // 검색창 비우기
+            iframeContainer.innerHTML = ''; // iframe 초기화
+            alert('검색이 초기화되었습니다!');
+        });
+
+        // 이벤트 설정
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>

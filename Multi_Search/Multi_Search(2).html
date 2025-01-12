@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="app.js" defer></script>
+    <title>동시 검색</title>
+    <link rel="icon" type="image/png" href="./icons/icon-128.png" />
+  </head>
+  <body>
+    <!-- 21개 기본 노출 수
+      <option value="">옵션</option>
+     -->
+    <main>
+      <nav>
+        <!-- Perplexity causing focus issue, this needs to be addressed! -->
+        <select id="leftSearchEngineSelect">
+          <!-- AI 인공지능 -->
+          <!-- <option value="https://www.perplexity.ai/search?q=">Perplexity.ai</option> -->
+          <!-- 포털 -->
+          <option value="https://search.naver.com/search.naver?ie={inputEncoding}&sm=whl_hty&query=">네이버(랜덤지식)</option>
+          <option value="https://search.naver.com/search.naver?ie=UTF-8&query=">네이버</option>
+          <option value="https://search.zum.com/search.zum?method=uni&option=accu&rd=1&query=">줌(ZUM)</option>
+          <option value="https://search.daum.net/search?w=tot&&q=">다음</option>
+          <option value="https://search.brave.com/search?source=llmSuggest&summary=1&q=">Brave Search</option>
+          <option value="https://www.duckduckgo.com/&q=">DuckDuckGo</option>
+          <option value="https://www.search.yahoo.com/search?q=">Yahoo</option>
+          <option value="https://yandex.com/search/?text=" title="러시아 최대 포털 사이트 '이미지 검색, 구글보다 뛰어나다는 평'">Yandex</option>
+          <option value="https://www.bing.com/search?q=">Bing</option>
+          <option value="https://www.google.com/search?q=">Google</option>
+          <!-- 미디어 -->
+          <option value="https://www.youtube.com/results?search_query=">유튜브</option>
+          <option value="https://www.youtube.com/hashtag/" title="유튜브 #해시태그# 검색">유튜브 #</option>
+          <!-- 위키 -->
+          <option value="https://namu.wiki/w/">나무위키</option>
+          <option value="https://ko.wikipedia.org/wiki/">위키백과🇰🇷</option>
+          <!-- 사전 -->
+          <option value="https://dict.naver.com/dict.search?query=">사전</option>
+          <option value="https://terms.naver.com/search.naver?query=">백과사전</option>
+          <!-- 학술/논문 -->
+          <option value="https://scholar.google.com/scholar?q=" title="구글 학술 검색">Google Scholar</option>
+          <option value="https://consensus.app/results/?q=" title="학술 검색 AI">Consensus (Research)</option>
+          <!-- 이미지 -->
+          <option value="https://search.naver.com/search.naver?where=image&sm=tab_jum&query=">네이버 이미지</option>
+          <!-- <option value="https://www.google.com/search?q=">구글 이미지</option> -->
+          <!-- 지도 -->
+          <option value="https://map.naver.com/p/search/">네이버 지도</option>
+          <option value="https://map.kakao.com/?q=">카카오맵</option>
+          <option value="https://www.google.co.kr/maps/search/">구글맵</option>
+          <!-- 쇼핑 -->
+          <option value="https://www.oasis.co.kr/product/search?keyword=">오아시스</option>
+          <option value="https://www.kurly.com/search?sword=">마켓컬리</option>
+          <option value="https://www.enuri.com/search.jsp?keyword=">에누리</option>
+          <option value="https://search.danawa.com/dsearch.php?query=">다나와</option>
+          <!-- <option value="https://ko.aliexpress.com/w/wholesale-%s.html" title="알리 익스프레스">알리</option> -->
+          <!-- 도서 -->
+          <option value="https://search.kyobobook.co.kr/search?keyword=">교보문고</option>
+          <!-- 앱 -->
+          <option value="https://play.google.com/store/search?q=">구글 플레이</option>
+          <!-- 음악 -->
+        </select>
+
+        <form class="form">
+          <input
+            id="mainSearchInput"
+            type="text"
+            class="searchTerm"
+            placeholder="Search..."
+            autofocus
+          />
+          <button id="clear-input" type="button">
+            <img src="./icons/clear.svg" alt="x" />
+          </button>
+        </form>
+
+        <select id="rightSearchEngineSelect">
+          <!-- <option value="https://www.perplexity.ai/search?q=">Perplexity.ai</option> -->
+          <!-- 포털 -->
+          <option value="https://www.google.com/search?q=">Google</option>
+          <option value="https://search.brave.com/search?source=llmSuggest&summary=1&q=">Brave Search</option>
+          <option value="https://www.duckduckgo.com/&q=">DuckDuckGo</option>
+          <option value="https://www.bing.com/search?q=">Bing</option>
+          <option value="https://www.search.yahoo.com/search?q=">Yahoo</option>          
+          <option value="https://yandex.com/search/?text=" title="러시아 최대 포털 사이트 '이미지 검색, 구글보다 뛰어나다는 평'">Yandex</option>
+          <option value="https://search.daum.net/search?w=tot&&q=">다음</option>
+          <option value="https://search.zum.com/search.zum?method=uni&option=accu&rd=1&query=">줌(ZUM)</option>
+          <option value="https://search.naver.com/search.naver?ie=UTF-8&query=">네이버</option>
+          <option value="https://search.naver.com/search.naver?ie={inputEncoding}&sm=whl_hty&query=">네이버(랜덤지식)</option>
+          <!-- 미디어 -->
+          <option value="https://www.youtube.com/results?search_query=">유튜브</option>
+          <option value="https://www.youtube.com/hashtag/" title="유튜브 #해시태그# 검색">유튜브 #</option>
+          <!-- 위키 -->
+          <option value="https://ko.wikipedia.org/wiki/">위키백과🇰🇷</option>
+          <option value="https://namu.wiki/w/">나무위키</option>
+          <!-- 사전 -->
+          <option value="https://terms.naver.com/search.naver?query=">백과사전</option>
+          <option value="https://dict.naver.com/dict.search?query=">사전</option>
+          <!-- 학술/논문 -->
+          <option value="https://consensus.app/results/?q=" title="학술 검색 AI">Consensus (Research)</option>
+          <option value="https://scholar.google.com/scholar?q=" title="구글 학술 검색">Google Scholar</option>
+          <!-- 이미지 -->
+          <!-- <option value="https://www.google.com/search?q=">구글 이미지</option> -->
+          <option value="https://search.naver.com/search.naver?where=image&sm=tab_jum&query=">네이버 이미지</option>
+          <!-- 지도 -->
+          <option value="https://www.google.co.kr/maps/search/">구글맵</option>
+          <option value="https://map.kakao.com/?q=">카카오맵</option>
+          <option value="https://map.naver.com/p/search/">네이버 지도</option>
+          <!-- 쇼핑 -->
+          <option value="https://www.oasis.co.kr/product/search?keyword=">오아시스</option>
+          <option value="https://www.kurly.com/search?sword=">마켓컬리</option>
+          <option value="https://www.enuri.com/search.jsp?keyword=">에누리</option>
+          <option value="https://search.danawa.com/dsearch.php?query=">다나와</option>
+          <!-- 도서 -->
+          <option value="https://search.kyobobook.co.kr/search?keyword=">교보문고</option>
+          <!-- 앱 -->
+          <option value="https://play.google.com/store/search?q=">구글 플레이</option>
+          <!-- 음악 -->
+          <!-- Have to clear cache as headers get store in there, will require higher browser control -->
+          <!-- <option value="https://www.phind.com/search?q=">Phind</option> -->
+          <!-- You has issues, have to click try ai, always -->
+          <!-- <option value=" https://you.com/search?q=">You</option> -->
+        </select>
+      </nav>
+
+      <section class="iframe-container">
+        <iframe
+          id="left"
+          src="https://www.google.com"
+          frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms"
+        >
+        </iframe>
+        <iframe
+          id="right"
+          src="https://www.bing.com"
+          frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms"
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>

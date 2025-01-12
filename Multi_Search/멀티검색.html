@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지도 동시 검색</title>
+    <style>
+        /* 검색창 및 버튼 스타일 */
+        #controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 700px; /* 검색창 폭 */
+            height: 30px; /* 검색창 높이 */
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        button {
+            height: 30px; /* 버튼 높이 */
+            font-size: 14px;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* 결과 창 컨테이너 기본 스타일 */
+        #iframeContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 10px;
+            height: calc(100vh - 80px); /* 검색창 및 버튼 높이에 맞춘 동적 크기 */
+            width: 100%;
+            margin: 0; /* 여백 제거 */
+            padding: 0; /* 여백 제거 */
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input id="searchBar" type="text" placeholder="검색어를 입력하세요..." />
+        <button id="searchButton">검색</button>
+        <button id="resetSearchButton">검색 초기화</button>
+    </div>
+
+    <div id="iframeContainer">
+        <!-- iframe이 동적으로 추가됩니다 -->
+    </div>
+
+    <script>
+        // 초기 사이트 목록 (지도)
+        let sites_map = [
+            "https://map.naver.com/p/search/",
+            "https://map.kakao.com/?q="
+        ];
+
+        const iframeContainer = document.getElementById('iframeContainer');
+        const searchBar = document.getElementById('searchBar');
+        const searchButton = document.getElementById('searchButton');
+        const resetSearchButton = document.getElementById('resetSearchButton');
+
+        // 첫 실행 시 검색창에 커서 자동 위치
+        window.addEventListener('DOMContentLoaded', () => {
+            searchBar.focus(); // 검색창에 커서 위치
+        });
+
+        // 검색 실행 함수
+        const performSearch = () => {
+            const query = searchBar.value.trim();
+            if (!query) return;
+
+            iframeContainer.innerHTML = ''; // 기존 iframe 제거
+
+            sites_map.forEach(site => {
+                const iframe = document.createElement('iframe');
+                iframe.src = site + encodeURIComponent(query);
+                iframeContainer.appendChild(iframe);
+            });
+        };
+
+        // 검색 초기화 버튼 클릭 시
+        resetSearchButton.addEventListener('click', () => {
+            searchBar.value = ''; // 검색창 비우기
+            iframeContainer.innerHTML = ''; // iframe 초기화
+            alert('검색이 초기화되었습니다!');
+        });
+
+        // 이벤트 설정
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 동시 검색</title>
+    <link rel="stylesheet" href="css/Multi_Search.css">
+</head>
+<body>
+    <div id="controls">
+        <input id="searchBar" type="text" placeholder="검색어를 입력하세요..." />
+        <button id="searchButton">검색</button>
+        <button id="resetSearchButton">초기화</button>
+    </div>
+
+    <div id="iframeContainer">
+        <!-- iframe이 동적으로 추가됩니다 -->
+    </div>
+
+    <script>
+        // 초기 사이트 목록 (지도)
+        let sites_map = [
+            // AI
+            "https://chat.openai.com/?q=",
+            "https://claude.ai/new?q=",
+            "https://perplexity.ai/search?q=",
+            "https://clova-x.naver.com/?q=",
+            // 검색 포털 사이트
+            //"https://search.naver.com/search.naver?ie=UTF-8&query="
+            //https://www.google.com/search?q=
+            //"https://www.youtube.com/results?search_query="
+            //"https://search.daum.net/search?w=tot&&q=",
+            "https://search.zum.com/search.zum?method=uni&option=accu&rd=1&query=",
+            "https://bing.com/search?q=",
+            // 위키
+            //"https://namu.wiki/w/"
+            "https://ko.wikipedia.org/wiki/",
+            "http://wiki.hash.kr/index.php/",
+        ];
+
+        const iframeContainer = document.getElementById('iframeContainer');
+        const searchBar = document.getElementById('searchBar');
+        const searchButton = document.getElementById('searchButton');
+        const resetSearchButton = document.getElementById('resetSearchButton');
+
+        // 검색 실행 함수
+        const performSearch = () => {
+            const query = searchBar.value.trim();
+            if (!query) return;
+
+            iframeContainer.innerHTML = ''; // 기존 iframe 제거
+
+            sites_map.forEach(site => {
+                const iframe = document.createElement('iframe');
+                iframe.src = site + encodeURIComponent(query);
+                iframeContainer.appendChild(iframe);
+            });
+        };
+
+        // 검색 초기화 버튼 클릭 시
+        resetSearchButton.addEventListener('click', () => {
+            searchBar.value = ''; // 검색창 비우기
+            iframeContainer.innerHTML = ''; // iframe 초기화
+            alert('검색이 초기화되었습니다!');
+        });
+
+        // 이벤트 설정
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>

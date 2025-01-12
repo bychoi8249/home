@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="app.js" defer></script>
+    <title>New Tab</title>
+    <link rel="icon" type="image/png" href="./icons/icon-128.png" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <!-- Perplexity causing focus issue, this needs to be addressed! -->
+        <select id="leftSearchEngineSelect">
+          <!-- <option value="https://www.perplexity.ai/search?q=">
+            Perplexity.ai
+          </option> -->
+          <option
+            value="https://search.brave.com/search?source=llmSuggest&summary=1&q="
+          >
+            Brave Search
+          </option>
+          <option value="https://www.google.com/search?q=">Google</option>
+          <option value="https://www.bing.com/search?q=">Bing</option>
+          <option value="https://www.duckduckgo.com/&q=">DuckDuckGo</option>
+          <option value="https://www.search.yahoo.com/search?q=">Yahoo</option>
+          <option value="https://yandex.com/search/?text=">Yandex</option>
+          <option value="   https://scholar.google.com/scholar?q=">
+            Google Scholar
+          </option>
+          <option value="https://consensus.app/results/?q=">
+            Consensus (Research)
+          </option>
+        </select>
+
+        <form class="form">
+          <input
+            id="mainSearchInput"
+            type="text"
+            class="searchTerm"
+            placeholder="Search..."
+            autofocus
+          />
+          <button id="clear-input" type="button">
+            <img src="./icons/clear.svg" alt="x" />
+          </button>
+        </form>
+
+        <select id="rightSearchEngineSelect">
+          <option value="https://www.google.com/search?q=">Google</option>
+          <option value="https://www.bing.com/search?q=">Bing</option>
+          <!-- <option value="https://www.perplexity.ai/search?q=">
+            Perplexity.ai
+          </option> -->
+          <option value="https://www.duckduckgo.com/&q=">DuckDuckGo</option>
+          <option
+            value="https://search.brave.com/search?source=llmSuggest&summary=1&q="
+          >
+            Brave Search
+          </option>
+          <option value="https://www.search.yahoo.com/search?p=">Yahoo</option>
+          <option value="https://yandex.com/search/?text=">Yandex</option>
+          <option value="   https://scholar.google.com/scholar?q=">
+            Google Scholar
+          </option>
+          <option value="https://consensus.app/results/?q=">
+            Consensus (Research)
+          </option>
+          <!-- Have to clear cache as headers get store in there, will require higher browser control -->
+          <!-- <option value="https://www.phind.com/search?q=">Phind</option> -->
+          <!-- You has issues, have to click try ai, always -->
+          <!-- <option value=" https://you.com/search?q=">You</option> -->
+        </select>
+      </nav>
+
+      <section class="iframe-container">
+        <iframe
+          id="left"
+          src="https://www.google.com"
+          frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms"
+        >
+        </iframe>
+        <iframe
+          id="right"
+          src="https://www.bing.com"
+          frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms"
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>

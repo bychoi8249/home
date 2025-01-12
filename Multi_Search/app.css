@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fefbf6;
+  background-color: #1c1c21;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+form {
+  width: 70%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+#clear-input {
+  border-bottom-right-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  margin-left: -34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+#clear-input img {
+  width: 25px;
+  height: 25px;
+}
+
+form input {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  border-width: 2px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #fffffc;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+form input:focus {
+  outline: 4px solid #6a6b70;
+}
+
+select {
+  padding: 10px 30px 10px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #4a4a4a;
+  color: #fefbf6;
+  appearance: none;
+  -moz-appearance: none;
+  text-align: left;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 5px;
+}
+
+select:hover,
+select:focus {
+  outline: 2px solid #6a6b70;
+}
+
+select::-webkit-select-arrow {
+  color: #fff;
+}
+
+select:-moz-focusring::-moz-focus-inner,
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
+}
+
+select option {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+#left,
+#right {
+  width: 49.5%;
+  height: calc(100vh - 60px);
+  background-color: #6a6b70;
+  border: 1px solid #6a6b70;
+  border-radius: 10px;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.2%;
+}

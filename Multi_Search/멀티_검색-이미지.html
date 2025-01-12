@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(3)이미지 동시 검색</title>
+    <link rel="stylesheet" href="css/Multi_Search.css">
+</head>
+<body>
+    <div id="controls">
+        <input id="searchBar" type="text" placeholder="이미지 검색" />
+        <button id="searchButton">🔍</button>
+        <button id="resetSearchButton">❎</button>
+    </div>
+
+    <div id="iframeContainer">
+        <!-- iframe이 동적으로 추가됩니다 -->
+    </div>
+
+    <script>
+        // 초기 사이트 목록 (지도)
+        let sites_map = [
+            "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=",
+            "https://images.google.com//search?q=",
+            "https://yandex.com/images/search?text=",
+        ];
+
+        const iframeContainer = document.getElementById('iframeContainer');
+        const searchBar = document.getElementById('searchBar');
+        const searchButton = document.getElementById('searchButton');
+        const resetSearchButton = document.getElementById('resetSearchButton');
+
+        // 첫 실행 시 검색창에 커서 자동 위치
+        window.addEventListener('DOMContentLoaded', () => {
+                    searchBar.focus(); // 검색창에 커서 위치
+        });
+
+        // 검색 실행 함수
+        const performSearch = () => {
+            const query = searchBar.value.trim();
+            if (!query) return;
+
+            iframeContainer.innerHTML = ''; // 기존 iframe 제거
+
+            sites_map.forEach(site => {
+                const iframe = document.createElement('iframe');
+                iframe.src = site + encodeURIComponent(query);
+                iframeContainer.appendChild(iframe);
+            });
+        };
+
+        // 검색 초기화 버튼 클릭 시
+        resetSearchButton.addEventListener('click', () => {
+            searchBar.value = ''; // 검색창 비우기
+            iframeContainer.innerHTML = ''; // iframe 초기화
+            alert('검색이 초기화되었습니다!');
+        });
+
+        // 이벤트 설정
+        searchButton.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>

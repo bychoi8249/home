@@ -1,0 +1,46 @@
+/* 검색창 및 버튼 스타일 */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* 검색창 설정 */
+input[type="text"] {
+    width: 800px; 
+    height: 20px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+/* 버튼 설정 */
+button {
+    height: 30px;
+    font-size: 14px;
+    /* padding: 0 15px; */
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+/* 결과 창 컨테이너 기본 설정 */
+#iframeContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 10px;
+    height: calc(100vh - 70px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease; /* 전환 효과 */
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
