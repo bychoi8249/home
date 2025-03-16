@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(6)이미지 동시 검색</title>
+    <title>(4)미디어(영문) 동시 검색</title>
     <link rel="stylesheet" href="css/Multi_Search.css">
 </head>
 <body>
     <div id="controls">
-        <input id="searchBar" type="text" placeholder="이미지 검색" />
+        <input id="searchBar" type="text" placeholder="영화 검색" />
         <button id="searchButton">🔍</button>
         <button id="resetSearchButton">❎</button>
     </div>
@@ -20,12 +20,10 @@
     <script>
         // 초기 사이트 목록 (지도)
         let sites_map = [
-            "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=",
-            "https://images.google.com//search?q=",
-            "https://kr.pinterest.com/search/pins/?q=",
-            "https://pixabay.com/images/search/",
-            "https://unsplash.com/ko/s/사진/",
-            "https://www.pexels.com/ko-kr/search/",
+            "https://en.wikipedia.org/w/index.php?search=",
+            "https://www.netflix.com/search?q=",
+            "https://www.themoviedb.org/search?query=",
+            "https://www.imdb.com/find/?q=",
         ];
 
         const iframeContainer = document.getElementById('iframeContainer');
